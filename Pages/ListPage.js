@@ -46,7 +46,7 @@ export default class ListPage extends Component {
     const { navigate } = this.props.navigation
     const { fileList, userInfo, refreshing } = this.state
     let username = (userInfo && userInfo.payload) ? userInfo.payload.username : null
-    console.log('list... ', fileList)
+    // console.log('list... ', fileList)
     return (
       <Container>
         <Header>

@@ -16,8 +16,8 @@ export default class LoginPage extends Component {
         super(props);
         this.state = {
             isLoading: false,
-            userPhone: '+919439700504',
-            password: 'Biswa123!'
+            userPhone: '',
+            password: ''
         }
     }
 

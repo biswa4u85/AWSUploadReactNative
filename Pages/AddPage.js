@@ -1,10 +1,11 @@
 import { View, Text, AsyncStorage, TouchableOpacity } from 'react-native';
 import React, { Component } from 'react';
+import { RNS3 } from 'react-native-s3-upload';
 import { Container, Content, Form, Spinner, Button, Picker, Thumbnail } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 import ImagePicker from 'react-native-image-picker';
-import { addData, addFile } from '../server/server';
+import { addData } from '../server/server';
 
 export default class AddPage extends Component {
 
@@ -75,12 +76,24 @@ export default class AddPage extends Component {
           this.setState({ fileError: null })
         }
         this.setState({ isLoadingImg: true });
-        addFile(response).then((imgUrl) => {
-          if (imgUrl) {
-            this.setState({ filePath: imgUrl.callback_url, isLoadingImg: false });
+        response['name'] = response.fileName
+        const options = {
+          keyPrefix: `${type}/`,
+          bucket: "listfiles-files-new",
+          region: "us-east-1",
+          accessKey: "AKIAZEGHFY3HS7XVCTOL",
+          secretKey: "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",
+          successActionStatus: 201
+        }
+        RNS3.put(response, options).then(files => {
+          if (files.status !== 201) {
+            this.setState({ isLoadingImg: false });
+          } else {
+            let data = files.body
+            this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
           }
-          this.setState({ isLoadingImg: false });
-        })
+          throw new Error("Failed to upload image to S3");
+        });
       }
     });
   };
