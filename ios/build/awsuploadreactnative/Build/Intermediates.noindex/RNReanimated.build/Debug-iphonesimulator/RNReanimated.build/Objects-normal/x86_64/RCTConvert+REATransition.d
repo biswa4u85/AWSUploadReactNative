@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/node_modules/react-native-reanimated/ios/Transitioning/RCTConvert+REATransition.m \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/node_modules/react-native-reanimated/ios/Transitioning/RCTConvert+REATransition.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/yoga/YGValue.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/node_modules/react-native-reanimated/ios/Transitioning/REATransition.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTView.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/ios/build/awsuploadreactnative/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/node_modules/react-native-reanimated/ios/Transitioning/REATransitionAnimation.h \
+  /Users/biswa/Sites/Others/AWSUploadReactNative/node_modules/react-native-reanimated/ios/Transitioning/REATransitionValues.h

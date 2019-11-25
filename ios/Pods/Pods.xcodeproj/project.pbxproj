@@ -1,0 +1,1184 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		ED2506AE7DE35D654F61254441EA7155 /* boost-for-react-native */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 49A6C673575ECB0615B2B4620973CE46 /* Build configuration list for PBXAggregateTarget "boost-for-react-native" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "boost-for-react-native";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		043EF2576673DB807FD784663A279315 /* strtod.cc in Sources */ = {isa = PBXBuildFile; fileRef = 399872F0187A22EA558CB9D045BD7B7D /* strtod.cc */; };
+		05292D6EE56747AA9617CFC829A5B881 /* raw_logging.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A8B9A377B48A683CE15BE2226EA28D /* raw_logging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		055A3F82897DC9BDC3E4E9A082ACE4A3 /* SpookyHashV2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05E987A3D4A6A0E56AE2E18BDB0EE04 /* SpookyHashV2.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		07C5D25CAA17ED01113EC26D4BD6B757 /* vlog_is_on.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE95448B1D8FBB0BB0095E172DC37C9 /* vlog_is_on.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A7B2F29DC1FE494FF360EA9DFD17213 /* json_pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5A138B0AF9BA29E8308CC2D8B2FDE /* json_pointer.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		0C2B648B2794FFA998C12FA015DFE593 /* Demangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CEC5DAA2679116F80A8C322CF9D82A7 /* Demangle.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		0CC5132B7367997412EA635B7B8AC562 /* utilities.cc in Sources */ = {isa = PBXBuildFile; fileRef = A5C911F39BE442C7C87C2A57E97EBD7A /* utilities.cc */; };
+		16D6C791D60CCAC99E79F4ED422A5497 /* cached-powers.cc in Sources */ = {isa = PBXBuildFile; fileRef = 328E002B1FD3A6FBBDA0B2EFBC1B5487 /* cached-powers.cc */; };
+		1BF9C5264B9BF36B9DF0FBFB9B476059 /* demangle.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB846E7B6EC132A680BB16C120686 /* demangle.cc */; };
+		1CD13C966D2B2A06EB17140D443CF6EC /* stl_logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 30502828C350EC7CBFBE5CE39E02DCAA /* stl_logging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		203AFE8A1C55F95ABE7B96729CC44E3D /* ScopeGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6B502C194FF3A94453320004FB86384 /* ScopeGuard.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		267A50C4F892793B3ABF4C5AD43020BF /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 81ABD8B8D91971D0DF4F11F4A1CCE13B /* utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E31E0B3EBD402CEFF64891929293A70 /* fixed-dtoa.h in Headers */ = {isa = PBXBuildFile; fileRef = A80FB301586F3DED2AEA9A7C04C0A45F /* fixed-dtoa.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		315DD12BD338BA4A82A423B0AEFE4024 /* Assume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D95199542512FFE661264049CA4E7763 /* Assume.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		34E5E55C90B1186766F63CEBFFA36552 /* Pods-awsuploadreactnative-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33531261D09153BE466F82B8ABD8C518 /* Pods-awsuploadreactnative-tvOS-dummy.m */; };
+		3FAA78E7F45F7BAA1325594718AAA891 /* double-conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 521B36C6D595E37338BC19043EFAB4E5 /* double-conversion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		405106DACC3FB437FC3C2F4B98E7EAE1 /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5506189D967BB06749B3B0E48DD9DB87 /* String.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		412512DFE06BF80C29382028C8AD6410 /* bignum.h in Headers */ = {isa = PBXBuildFile; fileRef = 031C5965B07323877B0BE65B16336886 /* bignum.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41F219F3DBADB182C9E6CEB3B30E4C7D /* ColdClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06F85AD8AF1C7A68E0C1475DC87B3E92 /* ColdClass.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		4A07B87C8545FBA4E1FAF1F6304EE538 /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97752372C9650A05DB1B4343C460F6B4 /* json.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		4CB929E427FE18007FE5916C3564C473 /* bignum-dtoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E2BC43BD56339CA3DED66A87707C54E /* bignum-dtoa.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4EAC303956D8C220AD690CEAA3F90684 /* diy-fp.h in Headers */ = {isa = PBXBuildFile; fileRef = E900B0B8E64B5CA201557483E7C35D62 /* diy-fp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58A73CF4287EC6C37EE884606F54BDAC /* Folly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6100B7C43DD662044B863E3342C51B95 /* Folly-dummy.m */; };
+		5CF09E5A18EAD99CC44AD492C2E03D12 /* symbolize.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3F12EB5F9B186D5A7087633F447F53FE /* symbolize.cc */; };
+		658205E6F928E30B4656923A1160D525 /* dynamic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B7C9B639315DF6D84671195DE6623A /* dynamic.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		665CC15894357B45E368FADD669D4B01 /* signalhandler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4A65832BD774C014CBA1965EDE268F18 /* signalhandler.cc */; };
+		6D67C369E443987A6988B021A5A1661D /* double-conversion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9FC820B5579AEA6BB3688B0D6F2B7924 /* double-conversion.cc */; };
+		717E3B9CB592AFC79A5C58E5B22B39DC /* Conv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0D95B1B16B6702CD417F9E8179207CF /* Conv.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		7C3BF125F0ECEE3F6CCBDF82D9129F9D /* fast-dtoa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 65994577A7D43E89898AE39D0AA8E7DA /* fast-dtoa.cc */; };
+		90E73ACFE6F722DC8B92E91689E28459 /* vlog_is_on.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7E189B725277AF78EF896963AC8C0183 /* vlog_is_on.cc */; };
+		92A8544B73B2FA29B9CFDE72C5FDDBB6 /* strtod.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F106A05F805D1079E325A566827A0F /* strtod.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9330F7317C6D7BCA40AA444500025A23 /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 13DBD99C7DFED7152D5C6A624A767497 /* logging.cc */; };
+		9996280AB03F7D42B89072C574D777A7 /* raw_logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0817E5AF80154B06352E4403C4215E92 /* raw_logging.cc */; };
+		A189673CE87F612ED3488113F9DAFE98 /* ieee.h in Headers */ = {isa = PBXBuildFile; fileRef = 602DA9443017AFFEE971F78601AC23A2 /* ieee.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A84889EC40A39B57560FB8857C3DCB6F /* Unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455C905A60462FEA87968F14D9CCAD71 /* Unicode.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		B6673E792D72A52A250965A774B078A3 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0E8060DCFA082DEA1399E6D881C566 /* logging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB2198FECD06043FF1A0DEA7302A4E82 /* Format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05BCD5C080F27CF9DAB5611A91A34289 /* Format.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		BEC1052E6EC8BDA846B649FFD43F6826 /* cached-powers.h in Headers */ = {isa = PBXBuildFile; fileRef = F9FDE2BC9F3B55AB387A25B772635350 /* cached-powers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C680A39A4BD3F0FE980B6BA5F498F6B8 /* fixed-dtoa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 84A422E230C18E3F661DE2E7B9F3C954 /* fixed-dtoa.cc */; };
+		CDC2C1B7FD30B28BCDE0FC891799FA45 /* diy-fp.cc in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A406ACED4FF277403ED5D737F1D4 /* diy-fp.cc */; };
+		D2925C2C37564AE1966D86DBAC52E2A4 /* glog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D39A69CE1891993FE6AE4FCB76DF4 /* glog-dummy.m */; };
+		D66CC6A0BC609A5340E9FD07767AEF3B /* F14Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AABD7181EA87FBB810207DBC9667B4C /* F14Table.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		DA82688CD999B273E8751F326C5730F8 /* bignum.cc in Sources */ = {isa = PBXBuildFile; fileRef = 48F2864485F008730716D49FFAA52CE4 /* bignum.cc */; };
+		E2FAF74F8455A86C919D9BB1231FF86C /* MallocImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1C8FCA249113DDD24F7F6A1E29EEE /* MallocImpl.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		E58B5B4F5871373789281DC1B28F179B /* Pods-awsuploadreactnative-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF2D13978FBE694388722DB663950A /* Pods-awsuploadreactnative-dummy.m */; };
+		E953548BA212D0038557EBF302E5FB1A /* fast-dtoa.h in Headers */ = {isa = PBXBuildFile; fileRef = B1D08C5245D3560FB9D2DDB97861B4B4 /* fast-dtoa.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB8573128A19B011359CDA4B5B7114E3 /* bignum-dtoa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EB8B3ADD18A55309B8FB2222078C9 /* bignum-dtoa.cc */; };
+		F202713F85C619F59CD148F0DCE40657 /* log_severity.h in Headers */ = {isa = PBXBuildFile; fileRef = E59898A483D763EAD65BB911FD08EA04 /* log_severity.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F3EAF57AAF72460D52BF2A4E0B4EC18F /* Demangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E2666355A9D8A01E6076093FC6AC896 /* Demangle.cpp */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1"; }; };
+		FFEC174D13E15EF3F84EF20B014DFD24 /* DoubleConversion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CBE14F7A5432070195C040C059931 /* DoubleConversion-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AA94F6A87E7418A3970D7387676AF2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EFEFB685D97280256C559792236873;
+			remoteInfo = glog;
+		};
+		5603ABA79492DE32F27EFEAEBEFC3D82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2506AE7DE35D654F61254441EA7155;
+			remoteInfo = "boost-for-react-native";
+		};
+		5D6816DA50A567761A9C3F30A29EBD9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AB2EF542954AB1C999E03BFEF8DE806;
+			remoteInfo = DoubleConversion;
+		};
+		605D7055E58FE5F13391CB302175563F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AB2EF542954AB1C999E03BFEF8DE806;
+			remoteInfo = DoubleConversion;
+		};
+		B627CFC42236E2B04C2D7D32C95CE2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2506AE7DE35D654F61254441EA7155;
+			remoteInfo = "boost-for-react-native";
+		};
+		BC91221275B58676B11DA50C37EFADDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4F685BE3CAC127BDCE4E0DBBD88D191;
+			remoteInfo = Folly;
+		};
+		F1EB3E536C3BE486DD7EB4007F830F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0EFEFB685D97280256C559792236873;
+			remoteInfo = glog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0136544581323AC8E5A57BF4BEBD0AFE /* DoubleConversion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DoubleConversion-prefix.pch"; sourceTree = "<group>"; };
+		031C5965B07323877B0BE65B16336886 /* bignum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bignum.h; path = "double-conversion/bignum.h"; sourceTree = "<group>"; };
+		05BCD5C080F27CF9DAB5611A91A34289 /* Format.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Format.cpp; path = folly/Format.cpp; sourceTree = "<group>"; };
+		06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFolly.a; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F85AD8AF1C7A68E0C1475DC87B3E92 /* ColdClass.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ColdClass.cpp; path = folly/lang/ColdClass.cpp; sourceTree = "<group>"; };
+		0817E5AF80154B06352E4403C4215E92 /* raw_logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = raw_logging.cc; path = src/raw_logging.cc; sourceTree = "<group>"; };
+		0CE1C8FCA249113DDD24F7F6A1E29EEE /* MallocImpl.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = MallocImpl.cpp; path = folly/memory/detail/MallocImpl.cpp; sourceTree = "<group>"; };
+		0D7AF7130253177561A39A66DEB4686D /* DoubleConversion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DoubleConversion.xcconfig; sourceTree = "<group>"; };
+		0E2666355A9D8A01E6076093FC6AC896 /* Demangle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Demangle.cpp; path = folly/Demangle.cpp; sourceTree = "<group>"; };
+		0E5AB846E7B6EC132A680BB16C120686 /* demangle.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = demangle.cc; path = src/demangle.cc; sourceTree = "<group>"; };
+		11CD951832A91BC363D1D3C6DCECC536 /* Pods-awsuploadreactnative-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-awsuploadreactnative-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1397723F36DBA3811F2B788D71AF3965 /* Folly.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Folly.xcconfig; sourceTree = "<group>"; };
+		13DBD99C7DFED7152D5C6A624A767497 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cc; path = src/logging.cc; sourceTree = "<group>"; };
+		1DB5A138B0AF9BA29E8308CC2D8B2FDE /* json_pointer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = json_pointer.cpp; path = folly/json_pointer.cpp; sourceTree = "<group>"; };
+		2BFF2D13978FBE694388722DB663950A /* Pods-awsuploadreactnative-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-awsuploadreactnative-dummy.m"; sourceTree = "<group>"; };
+		2C4CBE14F7A5432070195C040C059931 /* DoubleConversion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DoubleConversion-dummy.m"; sourceTree = "<group>"; };
+		30502828C350EC7CBFBE5CE39E02DCAA /* stl_logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stl_logging.h; path = src/glog/stl_logging.h; sourceTree = "<group>"; };
+		328E002B1FD3A6FBBDA0B2EFBC1B5487 /* cached-powers.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "cached-powers.cc"; path = "double-conversion/cached-powers.cc"; sourceTree = "<group>"; };
+		33531261D09153BE466F82B8ABD8C518 /* Pods-awsuploadreactnative-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-awsuploadreactnative-tvOS-dummy.m"; sourceTree = "<group>"; };
+		399872F0187A22EA558CB9D045BD7B7D /* strtod.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = strtod.cc; path = "double-conversion/strtod.cc"; sourceTree = "<group>"; };
+		3C7EB8B3ADD18A55309B8FB2222078C9 /* bignum-dtoa.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "bignum-dtoa.cc"; path = "double-conversion/bignum-dtoa.cc"; sourceTree = "<group>"; };
+		3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libglog.a; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F12EB5F9B186D5A7087633F447F53FE /* symbolize.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = symbolize.cc; path = src/symbolize.cc; sourceTree = "<group>"; };
+		455C905A60462FEA87968F14D9CCAD71 /* Unicode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Unicode.cpp; path = folly/Unicode.cpp; sourceTree = "<group>"; };
+		48F2864485F008730716D49FFAA52CE4 /* bignum.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = bignum.cc; path = "double-conversion/bignum.cc"; sourceTree = "<group>"; };
+		4A65832BD774C014CBA1965EDE268F18 /* signalhandler.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = signalhandler.cc; path = src/signalhandler.cc; sourceTree = "<group>"; };
+		521B36C6D595E37338BC19043EFAB4E5 /* double-conversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "double-conversion.h"; path = "double-conversion/double-conversion.h"; sourceTree = "<group>"; };
+		5506189D967BB06749B3B0E48DD9DB87 /* String.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = String.cpp; path = folly/String.cpp; sourceTree = "<group>"; };
+		5B0E8060DCFA082DEA1399E6D881C566 /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging.h; path = src/glog/logging.h; sourceTree = "<group>"; };
+		5CEC5DAA2679116F80A8C322CF9D82A7 /* Demangle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Demangle.cpp; path = folly/detail/Demangle.cpp; sourceTree = "<group>"; };
+		5F912E3FA565AB0BF21AC07CC18464E0 /* Pods-awsuploadreactnative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-awsuploadreactnative.release.xcconfig"; sourceTree = "<group>"; };
+		602DA9443017AFFEE971F78601AC23A2 /* ieee.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ieee.h; path = "double-conversion/ieee.h"; sourceTree = "<group>"; };
+		6100B7C43DD662044B863E3342C51B95 /* Folly-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Folly-dummy.m"; sourceTree = "<group>"; };
+		65994577A7D43E89898AE39D0AA8E7DA /* fast-dtoa.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "fast-dtoa.cc"; path = "double-conversion/fast-dtoa.cc"; sourceTree = "<group>"; };
+		67C6A9073BA9B1017E14C8C2214BDB4F /* Folly-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Folly-prefix.pch"; sourceTree = "<group>"; };
+		68B7C9B639315DF6D84671195DE6623A /* dynamic.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dynamic.cpp; path = folly/dynamic.cpp; sourceTree = "<group>"; };
+		6AABD7181EA87FBB810207DBC9667B4C /* F14Table.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = F14Table.cpp; path = folly/container/detail/F14Table.cpp; sourceTree = "<group>"; };
+		6BCCD2535F41AA4EE9AE11E39271B7D6 /* libPods-awsuploadreactnative-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-awsuploadreactnative-tvOS.a"; path = "libPods-awsuploadreactnative-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DAF1DBB258FC548DE99441ECA886198 /* Pods-awsuploadreactnative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-awsuploadreactnative.debug.xcconfig"; sourceTree = "<group>"; };
+		6FFB7B2992BB53405E6B771A5BA1E97D /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDoubleConversion.a; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		798913C836D4159FE568350B5478E2D1 /* glog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = glog.xcconfig; sourceTree = "<group>"; };
+		7E189B725277AF78EF896963AC8C0183 /* vlog_is_on.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = vlog_is_on.cc; path = src/vlog_is_on.cc; sourceTree = "<group>"; };
+		7E2BC43BD56339CA3DED66A87707C54E /* bignum-dtoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "bignum-dtoa.h"; path = "double-conversion/bignum-dtoa.h"; sourceTree = "<group>"; };
+		81ABD8B8D91971D0DF4F11F4A1CCE13B /* utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utils.h; path = "double-conversion/utils.h"; sourceTree = "<group>"; };
+		84A422E230C18E3F661DE2E7B9F3C954 /* fixed-dtoa.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "fixed-dtoa.cc"; path = "double-conversion/fixed-dtoa.cc"; sourceTree = "<group>"; };
+		90F106A05F805D1079E325A566827A0F /* strtod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = strtod.h; path = "double-conversion/strtod.h"; sourceTree = "<group>"; };
+		97752372C9650A05DB1B4343C460F6B4 /* json.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = json.cpp; path = folly/json.cpp; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FC820B5579AEA6BB3688B0D6F2B7924 /* double-conversion.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "double-conversion.cc"; path = "double-conversion/double-conversion.cc"; sourceTree = "<group>"; };
+		A0D95B1B16B6702CD417F9E8179207CF /* Conv.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Conv.cpp; path = folly/Conv.cpp; sourceTree = "<group>"; };
+		A5C911F39BE442C7C87C2A57E97EBD7A /* utilities.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = utilities.cc; path = src/utilities.cc; sourceTree = "<group>"; };
+		A80FB301586F3DED2AEA9A7C04C0A45F /* fixed-dtoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "fixed-dtoa.h"; path = "double-conversion/fixed-dtoa.h"; sourceTree = "<group>"; };
+		AC4991185E0CA5FEB1098649E76F8BD1 /* libPods-awsuploadreactnative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-awsuploadreactnative.a"; path = "libPods-awsuploadreactnative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE95448B1D8FBB0BB0095E172DC37C9 /* vlog_is_on.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vlog_is_on.h; path = src/glog/vlog_is_on.h; sourceTree = "<group>"; };
+		B1D08C5245D3560FB9D2DDB97861B4B4 /* fast-dtoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "fast-dtoa.h"; path = "double-conversion/fast-dtoa.h"; sourceTree = "<group>"; };
+		C2D34B60E586FCAF6129ED41F1E4E2BB /* Pods-awsuploadreactnative-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-awsuploadreactnative-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C35C9114619B7D01D10CA19BB44A25D9 /* glog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "glog-prefix.pch"; sourceTree = "<group>"; };
+		C6A8B9A377B48A683CE15BE2226EA28D /* raw_logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = raw_logging.h; path = src/glog/raw_logging.h; sourceTree = "<group>"; };
+		D05E987A3D4A6A0E56AE2E18BDB0EE04 /* SpookyHashV2.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = SpookyHashV2.cpp; path = folly/hash/SpookyHashV2.cpp; sourceTree = "<group>"; };
+		D6B502C194FF3A94453320004FB86384 /* ScopeGuard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ScopeGuard.cpp; path = folly/ScopeGuard.cpp; sourceTree = "<group>"; };
+		D6C7379C4CF8843E9FC55843F1179DE6 /* Pods-awsuploadreactnative-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-awsuploadreactnative-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		D95199542512FFE661264049CA4E7763 /* Assume.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Assume.cpp; path = folly/lang/Assume.cpp; sourceTree = "<group>"; };
+		DCC6524F4E37D06E40832C3D1633737E /* Pods-awsuploadreactnative-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-awsuploadreactnative-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DF09D39C937DC8253FBBBEBD7A4CFD9E /* Pods-awsuploadreactnative-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-awsuploadreactnative-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		E16D39A69CE1891993FE6AE4FCB76DF4 /* glog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "glog-dummy.m"; sourceTree = "<group>"; };
+		E59898A483D763EAD65BB911FD08EA04 /* log_severity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_severity.h; path = src/glog/log_severity.h; sourceTree = "<group>"; };
+		E900B0B8E64B5CA201557483E7C35D62 /* diy-fp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "diy-fp.h"; path = "double-conversion/diy-fp.h"; sourceTree = "<group>"; };
+		E989F6316A747D8F1D48607134C17D99 /* boost-for-react-native.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "boost-for-react-native.xcconfig"; sourceTree = "<group>"; };
+		E9B5A406ACED4FF277403ED5D737F1D4 /* diy-fp.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "diy-fp.cc"; path = "double-conversion/diy-fp.cc"; sourceTree = "<group>"; };
+		F2FFF7611A8D7567B9965D175F64A44A /* Pods-awsuploadreactnative-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-awsuploadreactnative-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9FDE2BC9F3B55AB387A25B772635350 /* cached-powers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "cached-powers.h"; path = "double-conversion/cached-powers.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68E4DC721715B13364B7CFA56B002488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CAB9E9930E23ED7549D782548019B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95FE0A459FE4734F24C0AA4ADD2A3833 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C83DB1CB470F5F24B49654D05DBB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F647B0E1839CC5C4A4E9015161E27F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1158E048224FD97CA112EFA808337395 /* Pods-awsuploadreactnative-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C2D34B60E586FCAF6129ED41F1E4E2BB /* Pods-awsuploadreactnative-tvOS-acknowledgements.markdown */,
+				D6C7379C4CF8843E9FC55843F1179DE6 /* Pods-awsuploadreactnative-tvOS-acknowledgements.plist */,
+				33531261D09153BE466F82B8ABD8C518 /* Pods-awsuploadreactnative-tvOS-dummy.m */,
+				DCC6524F4E37D06E40832C3D1633737E /* Pods-awsuploadreactnative-tvOS.debug.xcconfig */,
+				DF09D39C937DC8253FBBBEBD7A4CFD9E /* Pods-awsuploadreactnative-tvOS.release.xcconfig */,
+			);
+			name = "Pods-awsuploadreactnative-tvOS";
+			path = "Target Support Files/Pods-awsuploadreactnative-tvOS";
+			sourceTree = "<group>";
+		};
+		161F1C11E27E48A42C0EC0F2E2E87B24 /* DoubleConversion */ = {
+			isa = PBXGroup;
+			children = (
+				48F2864485F008730716D49FFAA52CE4 /* bignum.cc */,
+				031C5965B07323877B0BE65B16336886 /* bignum.h */,
+				3C7EB8B3ADD18A55309B8FB2222078C9 /* bignum-dtoa.cc */,
+				7E2BC43BD56339CA3DED66A87707C54E /* bignum-dtoa.h */,
+				328E002B1FD3A6FBBDA0B2EFBC1B5487 /* cached-powers.cc */,
+				F9FDE2BC9F3B55AB387A25B772635350 /* cached-powers.h */,
+				E9B5A406ACED4FF277403ED5D737F1D4 /* diy-fp.cc */,
+				E900B0B8E64B5CA201557483E7C35D62 /* diy-fp.h */,
+				9FC820B5579AEA6BB3688B0D6F2B7924 /* double-conversion.cc */,
+				521B36C6D595E37338BC19043EFAB4E5 /* double-conversion.h */,
+				65994577A7D43E89898AE39D0AA8E7DA /* fast-dtoa.cc */,
+				B1D08C5245D3560FB9D2DDB97861B4B4 /* fast-dtoa.h */,
+				84A422E230C18E3F661DE2E7B9F3C954 /* fixed-dtoa.cc */,
+				A80FB301586F3DED2AEA9A7C04C0A45F /* fixed-dtoa.h */,
+				602DA9443017AFFEE971F78601AC23A2 /* ieee.h */,
+				399872F0187A22EA558CB9D045BD7B7D /* strtod.cc */,
+				90F106A05F805D1079E325A566827A0F /* strtod.h */,
+				81ABD8B8D91971D0DF4F11F4A1CCE13B /* utils.h */,
+				ED6AFEEC89E5C603484CEB87C7B0125D /* Support Files */,
+			);
+			name = DoubleConversion;
+			path = DoubleConversion;
+			sourceTree = "<group>";
+		};
+		1A9D7DDC76D5E899C11082BB1E78B43D /* glog */ = {
+			isa = PBXGroup;
+			children = (
+				0E5AB846E7B6EC132A680BB16C120686 /* demangle.cc */,
+				E59898A483D763EAD65BB911FD08EA04 /* log_severity.h */,
+				13DBD99C7DFED7152D5C6A624A767497 /* logging.cc */,
+				5B0E8060DCFA082DEA1399E6D881C566 /* logging.h */,
+				0817E5AF80154B06352E4403C4215E92 /* raw_logging.cc */,
+				C6A8B9A377B48A683CE15BE2226EA28D /* raw_logging.h */,
+				4A65832BD774C014CBA1965EDE268F18 /* signalhandler.cc */,
+				30502828C350EC7CBFBE5CE39E02DCAA /* stl_logging.h */,
+				3F12EB5F9B186D5A7087633F447F53FE /* symbolize.cc */,
+				A5C911F39BE442C7C87C2A57E97EBD7A /* utilities.cc */,
+				7E189B725277AF78EF896963AC8C0183 /* vlog_is_on.cc */,
+				AEE95448B1D8FBB0BB0095E172DC37C9 /* vlog_is_on.h */,
+				655F89925F983C697B5266150A3A201E /* Support Files */,
+			);
+			name = glog;
+			path = glog;
+			sourceTree = "<group>";
+		};
+		2191FFBD4B5A7677AF9C49C831AD2632 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DE091FD90417FD2C182CA5ED6BE5D8B /* boost-for-react-native */,
+				161F1C11E27E48A42C0EC0F2E2E87B24 /* DoubleConversion */,
+				F3C76AAE2BCA3FDDDD8761F3996046E5 /* Folly */,
+				1A9D7DDC76D5E899C11082BB1E78B43D /* glog */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		467294BEA4CB821F989533765CC5E62F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FFB7B2992BB53405E6B771A5BA1E97D /* libDoubleConversion.a */,
+				06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */,
+				3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */,
+				AC4991185E0CA5FEB1098649E76F8BD1 /* libPods-awsuploadreactnative.a */,
+				6BCCD2535F41AA4EE9AE11E39271B7D6 /* libPods-awsuploadreactnative-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639898FA5E307D425C2152A5BD7B9BE4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1397723F36DBA3811F2B788D71AF3965 /* Folly.xcconfig */,
+				6100B7C43DD662044B863E3342C51B95 /* Folly-dummy.m */,
+				67C6A9073BA9B1017E14C8C2214BDB4F /* Folly-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Folly";
+			sourceTree = "<group>";
+		};
+		655F89925F983C697B5266150A3A201E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				798913C836D4159FE568350B5478E2D1 /* glog.xcconfig */,
+				E16D39A69CE1891993FE6AE4FCB76DF4 /* glog-dummy.m */,
+				C35C9114619B7D01D10CA19BB44A25D9 /* glog-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/glog";
+			sourceTree = "<group>";
+		};
+		9DE091FD90417FD2C182CA5ED6BE5D8B /* boost-for-react-native */ = {
+			isa = PBXGroup;
+			children = (
+				EBF60AE8B7F82C3769F1E7447D99AD66 /* Support Files */,
+			);
+			name = "boost-for-react-native";
+			path = "boost-for-react-native";
+			sourceTree = "<group>";
+		};
+		AD1C3DBE1AF2BB8B7C363CC6D8F9B454 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE61C4A3906D06C2D62BFCE91ECE4D44 /* Pods-awsuploadreactnative */,
+				1158E048224FD97CA112EFA808337395 /* Pods-awsuploadreactnative-tvOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CE61C4A3906D06C2D62BFCE91ECE4D44 /* Pods-awsuploadreactnative */ = {
+			isa = PBXGroup;
+			children = (
+				11CD951832A91BC363D1D3C6DCECC536 /* Pods-awsuploadreactnative-acknowledgements.markdown */,
+				F2FFF7611A8D7567B9965D175F64A44A /* Pods-awsuploadreactnative-acknowledgements.plist */,
+				2BFF2D13978FBE694388722DB663950A /* Pods-awsuploadreactnative-dummy.m */,
+				6DAF1DBB258FC548DE99441ECA886198 /* Pods-awsuploadreactnative.debug.xcconfig */,
+				5F912E3FA565AB0BF21AC07CC18464E0 /* Pods-awsuploadreactnative.release.xcconfig */,
+			);
+			name = "Pods-awsuploadreactnative";
+			path = "Target Support Files/Pods-awsuploadreactnative";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				2191FFBD4B5A7677AF9C49C831AD2632 /* Pods */,
+				467294BEA4CB821F989533765CC5E62F /* Products */,
+				AD1C3DBE1AF2BB8B7C363CC6D8F9B454 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBF60AE8B7F82C3769F1E7447D99AD66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E989F6316A747D8F1D48607134C17D99 /* boost-for-react-native.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/boost-for-react-native";
+			sourceTree = "<group>";
+		};
+		ED6AFEEC89E5C603484CEB87C7B0125D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D7AF7130253177561A39A66DEB4686D /* DoubleConversion.xcconfig */,
+				2C4CBE14F7A5432070195C040C059931 /* DoubleConversion-dummy.m */,
+				0136544581323AC8E5A57BF4BEBD0AFE /* DoubleConversion-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DoubleConversion";
+			sourceTree = "<group>";
+		};
+		F3C76AAE2BCA3FDDDD8761F3996046E5 /* Folly */ = {
+			isa = PBXGroup;
+			children = (
+				D95199542512FFE661264049CA4E7763 /* Assume.cpp */,
+				06F85AD8AF1C7A68E0C1475DC87B3E92 /* ColdClass.cpp */,
+				A0D95B1B16B6702CD417F9E8179207CF /* Conv.cpp */,
+				0E2666355A9D8A01E6076093FC6AC896 /* Demangle.cpp */,
+				5CEC5DAA2679116F80A8C322CF9D82A7 /* Demangle.cpp */,
+				68B7C9B639315DF6D84671195DE6623A /* dynamic.cpp */,
+				6AABD7181EA87FBB810207DBC9667B4C /* F14Table.cpp */,
+				05BCD5C080F27CF9DAB5611A91A34289 /* Format.cpp */,
+				97752372C9650A05DB1B4343C460F6B4 /* json.cpp */,
+				1DB5A138B0AF9BA29E8308CC2D8B2FDE /* json_pointer.cpp */,
+				0CE1C8FCA249113DDD24F7F6A1E29EEE /* MallocImpl.cpp */,
+				D6B502C194FF3A94453320004FB86384 /* ScopeGuard.cpp */,
+				D05E987A3D4A6A0E56AE2E18BDB0EE04 /* SpookyHashV2.cpp */,
+				5506189D967BB06749B3B0E48DD9DB87 /* String.cpp */,
+				455C905A60462FEA87968F14D9CCAD71 /* Unicode.cpp */,
+				639898FA5E307D425C2152A5BD7B9BE4 /* Support Files */,
+			);
+			name = Folly;
+			path = Folly;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2421B2BEB31793521AF7BB2ED8723279 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CB929E427FE18007FE5916C3564C473 /* bignum-dtoa.h in Headers */,
+				412512DFE06BF80C29382028C8AD6410 /* bignum.h in Headers */,
+				BEC1052E6EC8BDA846B649FFD43F6826 /* cached-powers.h in Headers */,
+				4EAC303956D8C220AD690CEAA3F90684 /* diy-fp.h in Headers */,
+				3FAA78E7F45F7BAA1325594718AAA891 /* double-conversion.h in Headers */,
+				E953548BA212D0038557EBF302E5FB1A /* fast-dtoa.h in Headers */,
+				2E31E0B3EBD402CEFF64891929293A70 /* fixed-dtoa.h in Headers */,
+				A189673CE87F612ED3488113F9DAFE98 /* ieee.h in Headers */,
+				92A8544B73B2FA29B9CFDE72C5FDDBB6 /* strtod.h in Headers */,
+				267A50C4F892793B3ABF4C5AD43020BF /* utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F64E2A0FE0A226B569BC7E4F4D5D4A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F202713F85C619F59CD148F0DCE40657 /* log_severity.h in Headers */,
+				B6673E792D72A52A250965A774B078A3 /* logging.h in Headers */,
+				05292D6EE56747AA9617CFC829A5B881 /* raw_logging.h in Headers */,
+				1CD13C966D2B2A06EB17140D443CF6EC /* stl_logging.h in Headers */,
+				07C5D25CAA17ED01113EC26D4BD6B757 /* vlog_is_on.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729C2BAD0CF94B47485A90F84698C6A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94FE17FFDE463BA3D59DAFA928A63848 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C667B31CE3D594C51024BC5C67A939 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E5DFE456CC3E1238E2703A3BF4FFA51 /* Pods-awsuploadreactnative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3194BF6DEAA622378220D6A6DE985447 /* Build configuration list for PBXNativeTarget "Pods-awsuploadreactnative" */;
+			buildPhases = (
+				97C667B31CE3D594C51024BC5C67A939 /* Headers */,
+				AF4B9081501F6C5B6892566BD7861523 /* Sources */,
+				D0F647B0E1839CC5C4A4E9015161E27F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9184B38055AF7D425441A5662DCDBAAE /* PBXTargetDependency */,
+				2FAC99F7D48E07E0A1B51A0B8CF78D06 /* PBXTargetDependency */,
+				FF70D1088B3500E0F285F0EC144EF1BA /* PBXTargetDependency */,
+				8BD1BE7793FE7973560D9AE0E4F4B84B /* PBXTargetDependency */,
+			);
+			name = "Pods-awsuploadreactnative";
+			productName = "Pods-awsuploadreactnative";
+			productReference = AC4991185E0CA5FEB1098649E76F8BD1 /* libPods-awsuploadreactnative.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2AB2EF542954AB1C999E03BFEF8DE806 /* DoubleConversion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0569CCDF3B3B687CF01EE8D4001AA7CC /* Build configuration list for PBXNativeTarget "DoubleConversion" */;
+			buildPhases = (
+				2421B2BEB31793521AF7BB2ED8723279 /* Headers */,
+				4869AC3A8D052C7008A7ED16837C1C54 /* Sources */,
+				68E4DC721715B13364B7CFA56B002488 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubleConversion;
+			productName = DoubleConversion;
+			productReference = 6FFB7B2992BB53405E6B771A5BA1E97D /* libDoubleConversion.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4903DF96190E9F93FBF72EB8C7FE8FF8 /* Pods-awsuploadreactnative-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0262F3FBE250FAF740672C02E707637 /* Build configuration list for PBXNativeTarget "Pods-awsuploadreactnative-tvOS" */;
+			buildPhases = (
+				94FE17FFDE463BA3D59DAFA928A63848 /* Headers */,
+				4A4E657940556782E507C90373034ABD /* Sources */,
+				82CAB9E9930E23ED7549D782548019B6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-awsuploadreactnative-tvOS";
+			productName = "Pods-awsuploadreactnative-tvOS";
+			productReference = 6BCCD2535F41AA4EE9AE11E39271B7D6 /* libPods-awsuploadreactnative-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A4F685BE3CAC127BDCE4E0DBBD88D191 /* Folly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63856FF929326F4C9C4843BBAB8FFB21 /* Build configuration list for PBXNativeTarget "Folly" */;
+			buildPhases = (
+				729C2BAD0CF94B47485A90F84698C6A1 /* Headers */,
+				D4B83D22ECB9ECD87B657522CC261976 /* Sources */,
+				95FE0A459FE4734F24C0AA4ADD2A3833 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				805238FEA8C330D36001A75C0822FE26 /* PBXTargetDependency */,
+				40796B10551B1D266F45BFE59409EA93 /* PBXTargetDependency */,
+				06F45A4CCD042D37FB83F59BDF973026 /* PBXTargetDependency */,
+			);
+			name = Folly;
+			productName = Folly;
+			productReference = 06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D0EFEFB685D97280256C559792236873 /* glog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD0690375E475E04D44DEDC55D553B0E /* Build configuration list for PBXNativeTarget "glog" */;
+			buildPhases = (
+				6F64E2A0FE0A226B569BC7E4F4D5D4A5 /* Headers */,
+				6AE7D5BE40098BF01BCD036433380D13 /* Sources */,
+				A5C83DB1CB470F5F24B49654D05DBB57 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glog;
+			productName = glog;
+			productReference = 3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 467294BEA4CB821F989533765CC5E62F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED2506AE7DE35D654F61254441EA7155 /* boost-for-react-native */,
+				2AB2EF542954AB1C999E03BFEF8DE806 /* DoubleConversion */,
+				A4F685BE3CAC127BDCE4E0DBBD88D191 /* Folly */,
+				D0EFEFB685D97280256C559792236873 /* glog */,
+				1E5DFE456CC3E1238E2703A3BF4FFA51 /* Pods-awsuploadreactnative */,
+				4903DF96190E9F93FBF72EB8C7FE8FF8 /* Pods-awsuploadreactnative-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4869AC3A8D052C7008A7ED16837C1C54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8573128A19B011359CDA4B5B7114E3 /* bignum-dtoa.cc in Sources */,
+				DA82688CD999B273E8751F326C5730F8 /* bignum.cc in Sources */,
+				16D6C791D60CCAC99E79F4ED422A5497 /* cached-powers.cc in Sources */,
+				CDC2C1B7FD30B28BCDE0FC891799FA45 /* diy-fp.cc in Sources */,
+				6D67C369E443987A6988B021A5A1661D /* double-conversion.cc in Sources */,
+				FFEC174D13E15EF3F84EF20B014DFD24 /* DoubleConversion-dummy.m in Sources */,
+				7C3BF125F0ECEE3F6CCBDF82D9129F9D /* fast-dtoa.cc in Sources */,
+				C680A39A4BD3F0FE980B6BA5F498F6B8 /* fixed-dtoa.cc in Sources */,
+				043EF2576673DB807FD784663A279315 /* strtod.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4E657940556782E507C90373034ABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34E5E55C90B1186766F63CEBFFA36552 /* Pods-awsuploadreactnative-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE7D5BE40098BF01BCD036433380D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF9C5264B9BF36B9DF0FBFB9B476059 /* demangle.cc in Sources */,
+				D2925C2C37564AE1966D86DBAC52E2A4 /* glog-dummy.m in Sources */,
+				9330F7317C6D7BCA40AA444500025A23 /* logging.cc in Sources */,
+				9996280AB03F7D42B89072C574D777A7 /* raw_logging.cc in Sources */,
+				665CC15894357B45E368FADD669D4B01 /* signalhandler.cc in Sources */,
+				5CF09E5A18EAD99CC44AD492C2E03D12 /* symbolize.cc in Sources */,
+				0CC5132B7367997412EA635B7B8AC562 /* utilities.cc in Sources */,
+				90E73ACFE6F722DC8B92E91689E28459 /* vlog_is_on.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4B9081501F6C5B6892566BD7861523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E58B5B4F5871373789281DC1B28F179B /* Pods-awsuploadreactnative-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B83D22ECB9ECD87B657522CC261976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315DD12BD338BA4A82A423B0AEFE4024 /* Assume.cpp in Sources */,
+				41F219F3DBADB182C9E6CEB3B30E4C7D /* ColdClass.cpp in Sources */,
+				717E3B9CB592AFC79A5C58E5B22B39DC /* Conv.cpp in Sources */,
+				0C2B648B2794FFA998C12FA015DFE593 /* Demangle.cpp in Sources */,
+				F3EAF57AAF72460D52BF2A4E0B4EC18F /* Demangle.cpp in Sources */,
+				658205E6F928E30B4656923A1160D525 /* dynamic.cpp in Sources */,
+				D66CC6A0BC609A5340E9FD07767AEF3B /* F14Table.cpp in Sources */,
+				58A73CF4287EC6C37EE884606F54BDAC /* Folly-dummy.m in Sources */,
+				BB2198FECD06043FF1A0DEA7302A4E82 /* Format.cpp in Sources */,
+				4A07B87C8545FBA4E1FAF1F6304EE538 /* json.cpp in Sources */,
+				0A7B2F29DC1FE494FF360EA9DFD17213 /* json_pointer.cpp in Sources */,
+				E2FAF74F8455A86C919D9BB1231FF86C /* MallocImpl.cpp in Sources */,
+				203AFE8A1C55F95ABE7B96729CC44E3D /* ScopeGuard.cpp in Sources */,
+				055A3F82897DC9BDC3E4E9A082ACE4A3 /* SpookyHashV2.cpp in Sources */,
+				405106DACC3FB437FC3C2F4B98E7EAE1 /* String.cpp in Sources */,
+				A84889EC40A39B57560FB8857C3DCB6F /* Unicode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F45A4CCD042D37FB83F59BDF973026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = glog;
+			target = D0EFEFB685D97280256C559792236873 /* glog */;
+			targetProxy = 4AA94F6A87E7418A3970D7387676AF2F /* PBXContainerItemProxy */;
+		};
+		2FAC99F7D48E07E0A1B51A0B8CF78D06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Folly;
+			target = A4F685BE3CAC127BDCE4E0DBBD88D191 /* Folly */;
+			targetProxy = BC91221275B58676B11DA50C37EFADDC /* PBXContainerItemProxy */;
+		};
+		40796B10551B1D266F45BFE59409EA93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "boost-for-react-native";
+			target = ED2506AE7DE35D654F61254441EA7155 /* boost-for-react-native */;
+			targetProxy = B627CFC42236E2B04C2D7D32C95CE2D8 /* PBXContainerItemProxy */;
+		};
+		805238FEA8C330D36001A75C0822FE26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DoubleConversion;
+			target = 2AB2EF542954AB1C999E03BFEF8DE806 /* DoubleConversion */;
+			targetProxy = 605D7055E58FE5F13391CB302175563F /* PBXContainerItemProxy */;
+		};
+		8BD1BE7793FE7973560D9AE0E4F4B84B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = glog;
+			target = D0EFEFB685D97280256C559792236873 /* glog */;
+			targetProxy = F1EB3E536C3BE486DD7EB4007F830F07 /* PBXContainerItemProxy */;
+		};
+		9184B38055AF7D425441A5662DCDBAAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DoubleConversion;
+			target = 2AB2EF542954AB1C999E03BFEF8DE806 /* DoubleConversion */;
+			targetProxy = 5D6816DA50A567761A9C3F30A29EBD9B /* PBXContainerItemProxy */;
+		};
+		FF70D1088B3500E0F285F0EC144EF1BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "boost-for-react-native";
+			target = ED2506AE7DE35D654F61254441EA7155 /* boost-for-react-native */;
+			targetProxy = 5603ABA79492DE32F27EFEAEBEFC3D82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BB1DBBCBCBE3C2B48B040B45581B19A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F912E3FA565AB0BF21AC07CC18464E0 /* Pods-awsuploadreactnative.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2435F4DFFEC78A4FBF29A69C55976E56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF09D39C937DC8253FBBBEBD7A4CFD9E /* Pods-awsuploadreactnative-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34F3FB9087C9F0276D311392DF7407EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798913C836D4159FE568350B5478E2D1 /* glog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/glog/glog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = glog;
+				PRODUCT_NAME = glog;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BA7488ACDA9DB527F757089EDF09FBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7AF7130253177561A39A66DEB4686D /* DoubleConversion.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DoubleConversion/DoubleConversion-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DoubleConversion;
+				PRODUCT_NAME = DoubleConversion;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		582080F69AB25BEDAD089E66869DC30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1397723F36DBA3811F2B788D71AF3965 /* Folly.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Folly/Folly-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = folly;
+				PRODUCT_NAME = Folly;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAE7DF2844C3923525A6955BDF8DE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E989F6316A747D8F1D48607134C17D99 /* boost-for-react-native.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		836ACEADC361FDA0E2BAEE3C6C7E4332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798913C836D4159FE568350B5478E2D1 /* glog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/glog/glog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = glog;
+				PRODUCT_NAME = glog;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8F188C8131DDD47784A28640BD0A071F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DAF1DBB258FC548DE99441ECA886198 /* Pods-awsuploadreactnative.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		99C5AE76A27CF56B5BF0DAA023D59B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7AF7130253177561A39A66DEB4686D /* DoubleConversion.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DoubleConversion/DoubleConversion-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DoubleConversion;
+				PRODUCT_NAME = DoubleConversion;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9EF79AC7613BA0E695AB49D67766860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1397723F36DBA3811F2B788D71AF3965 /* Folly.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Folly/Folly-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = folly;
+				PRODUCT_NAME = Folly;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C3F6BA22869B1FE7AC06CF26F93C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E989F6316A747D8F1D48607134C17D99 /* boost-for-react-native.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA32CB0F071590B14A1EFE45BE5C8401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCC6524F4E37D06E40832C3D1633737E /* Pods-awsuploadreactnative-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0569CCDF3B3B687CF01EE8D4001AA7CC /* Build configuration list for PBXNativeTarget "DoubleConversion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA7488ACDA9DB527F757089EDF09FBC /* Debug */,
+				99C5AE76A27CF56B5BF0DAA023D59B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3194BF6DEAA622378220D6A6DE985447 /* Build configuration list for PBXNativeTarget "Pods-awsuploadreactnative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F188C8131DDD47784A28640BD0A071F /* Debug */,
+				1BB1DBBCBCBE3C2B48B040B45581B19A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A6C673575ECB0615B2B4620973CE46 /* Build configuration list for PBXAggregateTarget "boost-for-react-native" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAE7DF2844C3923525A6955BDF8DE5A /* Debug */,
+				B6C3F6BA22869B1FE7AC06CF26F93C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63856FF929326F4C9C4843BBAB8FFB21 /* Build configuration list for PBXNativeTarget "Folly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9EF79AC7613BA0E695AB49D67766860 /* Debug */,
+				582080F69AB25BEDAD089E66869DC30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0262F3FBE250FAF740672C02E707637 /* Build configuration list for PBXNativeTarget "Pods-awsuploadreactnative-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA32CB0F071590B14A1EFE45BE5C8401 /* Debug */,
+				2435F4DFFEC78A4FBF29A69C55976E56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD0690375E475E04D44DEDC55D553B0E /* Build configuration list for PBXNativeTarget "glog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F3FB9087C9F0276D311392DF7407EC /* Debug */,
+				836ACEADC361FDA0E2BAEE3C6C7E4332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
