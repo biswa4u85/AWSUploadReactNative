@@ -22,7 +22,7 @@ export default class AddPage extends Component {
       type: 'image',
       filePath: null,
       fileError: null,
-      tags: [],
+      tags: null,
       newTag: ''
     }
   }
@@ -37,8 +37,18 @@ export default class AddPage extends Component {
   AddNewPage = async () => {
     const { navigate } = this.props.navigation
     const { userId, userName, mobile, type, filePath, tags } = this.state
-    this.setState({ isLoading: true })
     let params = { userId, userName, mobile, type, filePath, tags }
+    if (!params.tags) {
+      alert('Add a Tag');
+      return
+    } else {
+      params.tags = [params.tags]
+    }
+    if (!params.filePath) {
+      alert('Add a File');
+      return
+    }
+    this.setState({ isLoading: true })
     let result = await addData('files', params)
     if (result.statusCode == 200) {
       this.setState({ isLoading: false })
@@ -49,7 +59,7 @@ export default class AddPage extends Component {
   }
 
   _takePhoto = async () => {
-    const { type } = this.state
+    const { type, tags } = this.state
     const options = {
       title: 'Select Image',
       customButtons: [
@@ -68,18 +78,22 @@ export default class AddPage extends Component {
       } else if (response.customButton) {
         alert('Error...');
       } else {
-        let imageType = (response.type).split('/')
-        if (type != imageType[0]) {
-          this.setState({ fileError: `Its not a currect File` })
+        if (!tags) {
+          alert('Add a Tag');
           return
-        } else {
-          this.setState({ fileError: null })
         }
+        // let imageType = (response.type).split('/')
+        // if (type != imageType[0]) {
+        //   this.setState({ fileError: `Its not a currect File` })
+        //   return
+        // } else {
+        //   this.setState({ fileError: null })
+        // }
         this.setState({ isLoadingImg: true });
         response['name'] = response.fileName
         const options = {
-          keyPrefix: `${type}/`,
-          bucket: "listfiles-files-new",
+          keyPrefix: `${tags}/`,
+          bucket: "Listofallfiles",
           region: "us-east-1",
           accessKey: "AKIAZEGHFY3HS7XVCTOL",
           secretKey: "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",
@@ -117,22 +131,22 @@ export default class AddPage extends Component {
     }
   }
 
-  updateServiceTypes(val, type) {
-    const { tags } = this.state;
-    let tempTags = []
-    let value = val.toLowerCase()
-    if (type === 'add' && tags.indexOf(value) === -1) {
-      tags.push(value)
-      tempTags = tags
-    } else if (type === 'remove') {
-      for (let item of tags) {
-        if (item != val) {
-          tempTags.push(item)
-        }
-      }
-    }
-    this.setState({ tags: tempTags, newTag: '' })
-  }
+  // updateServiceTypes(val, type) {
+  //   const { tags } = this.state;
+  //   let tempTags = []
+  //   let value = val.toLowerCase()
+  //   if (type === 'add' && tags.indexOf(value) === -1) {
+  //     tags.push(value)
+  //     tempTags = tags
+  //   } else if (type === 'remove') {
+  //     for (let item of tags) {
+  //       if (item != val) {
+  //         tempTags.push(item)
+  //       }
+  //     }
+  //   }
+  //   this.setState({ tags: tempTags, newTag: '' })
+  // }
 
   render() {
     const { isLoading, types, type, tags, newTag } = this.state
@@ -153,14 +167,14 @@ export default class AddPage extends Component {
                 {types.map((item, key) => <Picker.Item key={key} label={item} value={item} />)}
               </Picker>
             </View>
-            {this.randerImg()}
-            <View><View style={{ flexDirection: 'row', flexWrap: 'wrap', paddingVertical: 10 }}>
+            <View>
+              {/* <View style={{ flexDirection: 'row', flexWrap: 'wrap', paddingVertical: 10 }}>
               {tags.map((item, key) => <View key={key} style={{ backgroundColor: '#ff0000', flexDirection: 'row', margin: 5, padding: 5 }}><Text style={{ fontSize: 16, color: '#000' }}>{item}</Text><TouchableOpacity onPress={() => this.updateServiceTypes(item, 'remove')}><Icon style={{ fontSize: 16, color: '#fff' }} type={'AntDesign'} name={'close'} /></TouchableOpacity></View>)}
-            </View>
+            </View> */}
               <View>
                 <Input
                   placeholder='Insert tag'
-                  value={newTag}
+                  value={tags}
                   inputStyle={{ marginLeft: 10, color: 'black' }}
                   keyboardAppearance="light"
                   autoCapitalize="none"
@@ -168,8 +182,8 @@ export default class AddPage extends Component {
                   keyboardType="default"
                   returnKeyType="done"
                   placeholderTextColor="black"
-                  onChangeText={(newTag) => this.setState({ newTag })}
-                  onSubmitEditing={() => this.updateServiceTypes(newTag, 'add')}
+                  onChangeText={(tags) => this.setState({ tags })}
+                  // onSubmitEditing={() => this.updateServiceTypes(newTag, 'add')}
                   leftIcon={
                     <Icon
                       name='user'
@@ -179,6 +193,7 @@ export default class AddPage extends Component {
                   }
                 />
               </View></View>
+            {this.randerImg()}
             <Button style={{ marginTop: 20 }} block success onPress={this.AddNewPage}>
               <Text style={{ color: '#fff', fontSize: 20, marginRight: 10 }}>Save</Text>
               {isLoading ? <Spinner color='#fff' /> : null}

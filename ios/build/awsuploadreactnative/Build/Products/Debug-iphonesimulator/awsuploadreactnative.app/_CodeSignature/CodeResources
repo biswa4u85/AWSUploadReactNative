@@ -52,9 +52,58 @@
 		<data>
 		SyvObHkkk6SlcWtv7C2+/olJLD8=
 		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
+		<data>
+		jreU5hZGNCik2Hp5uPrGZUy11X8=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
+		<data>
+		DUF+a5Z+T16n5pmNIgOYP+s3mOk=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
+		<data>
+		6feUATTd0/r2tER+rb3JnV0+CQY=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
+		<data>
+		IBuwnssTaVoEqhVHtNTT91gSl10=
+		</data>
+		<key>Frameworks/XCTest.framework/Info.plist</key>
+		<data>
+		PKZERfvFR9NslOzRKnNmu1CCGOk=
+		</data>
+		<key>Frameworks/XCTest.framework/XCTest</key>
+		<data>
+		n5db+miM5jX+gnf1Sh637Gr89Zw=
+		</data>
+		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
+		<data>
+		PrHbL9gCjHUBaCqWSsu0b+EGnYc=
+		</data>
+		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TuBj57ZP6zBqcL9HttO2Rucaw9E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Frameworks/XCTest.framework/version.plist</key>
+		<data>
+		IBuwnssTaVoEqhVHtNTT91gSl10=
+		</data>
+		<key>Frameworks/libXCTestBundleInject.dylib</key>
+		<data>
+		FjI0l272em8/mVEjw4rbrzKfxZA=
+		</data>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<data>
+		VJQSqjeRdA4318OjlAyd6XT73/c=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		SQlFDZUhZZ6wUyRULY460uMPeMY=
+		TJpLhLmcdvVelMZYGRQUngluJnk=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -75,6 +124,26 @@
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>PlugIns/awsuploadreactnativeTests.xctest.dSYM/Contents/Info.plist</key>
+		<data>
+		ZcvTgasKgP0muXv7gT0RBdKnoVs=
+		</data>
+		<key>PlugIns/awsuploadreactnativeTests.xctest.dSYM/Contents/Resources/DWARF/awsuploadreactnativeTests</key>
+		<data>
+		ufRxqjHV0d4D+s2oYSIFa2X/xio=
+		</data>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/Info.plist</key>
+		<data>
+		qs8dlcDBDZqZfgBPBKp/U3/9gPc=
+		</data>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/_CodeSignature/CodeResources</key>
+		<data>
+		nVpwUz5Czp3VaLnXXLCjKaiqstU=
+		</data>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/awsuploadreactnativeTests</key>
+		<data>
+		aevVGcdOQFOP66gx1iBtY37q+Aw=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -219,6 +288,129 @@
 			fh3QPdTOkLZYBSVUzXRZ3xZxZxc4mlUvpMbVal+JM+Y=
 			</data>
 		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jreU5hZGNCik2Hp5uPrGZUy11X8=
+			</data>
+			<key>hash2</key>
+			<data>
+			+nr3ouuUEQTKa3ftEYI3Fg0rDlErksYX+eDxpZ1LVaI=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DUF+a5Z+T16n5pmNIgOYP+s3mOk=
+			</data>
+			<key>hash2</key>
+			<data>
+			kZCvHePeVutqsyDtgfClyDWqxTeDIZDrp+iwV39UevE=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6feUATTd0/r2tER+rb3JnV0+CQY=
+			</data>
+			<key>hash2</key>
+			<data>
+			AKj1Rrfouzxuyo4wUGoNg1mj1lAqZrsPYOvuSMJn8Aw=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IBuwnssTaVoEqhVHtNTT91gSl10=
+			</data>
+			<key>hash2</key>
+			<data>
+			JWd/ru1b6k0uNZgO60tQbs9H8n+wZ9N9P0FKdkazZ2c=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PKZERfvFR9NslOzRKnNmu1CCGOk=
+			</data>
+			<key>hash2</key>
+			<data>
+			T3aARpB6bVvaFExMgjbfOQc+iQUEFERrbnjO8L6DvZc=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/XCTest</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n5db+miM5jX+gnf1Sh637Gr89Zw=
+			</data>
+			<key>hash2</key>
+			<data>
+			CpxZ1W8v75Koo6FOru2i8z4EVvgoPRc4T0TIiu62pB0=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PrHbL9gCjHUBaCqWSsu0b+EGnYc=
+			</data>
+			<key>hash2</key>
+			<data>
+			9ir34yGFEiL4iXHgeWCV1xU+GGEJQ/IYVsoy2yc9Nks=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TuBj57ZP6zBqcL9HttO2Rucaw9E=
+			</data>
+			<key>hash2</key>
+			<data>
+			89RGkjZaKuewYnjpzwhIswhqfrU8+pcEXqM/DHVrUmo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Frameworks/XCTest.framework/version.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IBuwnssTaVoEqhVHtNTT91gSl10=
+			</data>
+			<key>hash2</key>
+			<data>
+			JWd/ru1b6k0uNZgO60tQbs9H8n+wZ9N9P0FKdkazZ2c=
+			</data>
+		</dict>
+		<key>Frameworks/libXCTestBundleInject.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FjI0l272em8/mVEjw4rbrzKfxZA=
+			</data>
+			<key>hash2</key>
+			<data>
+			r1hEe52+xQY2ZdMm4JF7zjPjDt9jCnxR7dH/Q63lX+A=
+			</data>
+		</dict>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VJQSqjeRdA4318OjlAyd6XT73/c=
+			</data>
+			<key>hash2</key>
+			<data>
+			45pg9HlsUKawUobZCeEKqB3iB74fbPfWZUqEs9oZTYM=
+			</data>
+		</dict>
 		<key>Ionicons.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -261,6 +453,61 @@
 			<key>hash2</key>
 			<data>
 			ua3cE7d8ZyDNSM0Y8PSoyuWJsbkQNjDCSd5gq3Lf1r4=
+			</data>
+		</dict>
+		<key>PlugIns/awsuploadreactnativeTests.xctest.dSYM/Contents/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZcvTgasKgP0muXv7gT0RBdKnoVs=
+			</data>
+			<key>hash2</key>
+			<data>
+			yd/fqWOffitdsztm37tFhy8tWYmLmLpneu7WHuqTQv8=
+			</data>
+		</dict>
+		<key>PlugIns/awsuploadreactnativeTests.xctest.dSYM/Contents/Resources/DWARF/awsuploadreactnativeTests</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ufRxqjHV0d4D+s2oYSIFa2X/xio=
+			</data>
+			<key>hash2</key>
+			<data>
+			cxzoMJIYdYG/TVWp6yloVwiRuPmeN02FaakYD34sH7w=
+			</data>
+		</dict>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qs8dlcDBDZqZfgBPBKp/U3/9gPc=
+			</data>
+			<key>hash2</key>
+			<data>
+			VP+zCuttHgJIg489fDa4nmitDkXAiEA+VABg4Vn0tqY=
+			</data>
+		</dict>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nVpwUz5Czp3VaLnXXLCjKaiqstU=
+			</data>
+			<key>hash2</key>
+			<data>
+			+v4OMDli732U/b+w6ovU++DD8NGJ+nF6zEaDpL8bzcE=
+			</data>
+		</dict>
+		<key>PlugIns/awsuploadreactnativeTests.xctest/awsuploadreactnativeTests</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aevVGcdOQFOP66gx1iBtY37q+Aw=
+			</data>
+			<key>hash2</key>
+			<data>
+			rZeP+nVK3eN3VNZaCsEFWtISVhHP2irEQS1+Fd2aZcw=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>
