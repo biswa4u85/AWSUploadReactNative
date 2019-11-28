@@ -61,10 +61,11 @@ export default class AddPage extends Component {
   _takePhoto = async () => {
     const { type, tags } = this.state
     const options = {
-      title: 'Select Image',
+      title: `Select ${type}`,
       customButtons: [
-        { name: 'customOptionKey', title: 'Choose Photo from Custom Option' },
+        { name: 'customOptionKey', title: `Choose ${type} from Custom Option` },
       ],
+      mediaType: 'mixed',
       storageOptions: {
         skipBackup: true,
         path: 'images',
