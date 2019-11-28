@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>6WL4K28LXC.org.reactjs.native.example.awsuploadreactnative</string>
+	<string>G2G6J6YCMK.org.reactjs.native.example.awsuploadreactnative</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>6WL4K28LXC.org.reactjs.native.example.awsuploadreactnative</string>
+		<string>G2G6J6YCMK.org.reactjs.native.example.awsuploadreactnative</string>
 	</array>
 </dict>
 </plist>
