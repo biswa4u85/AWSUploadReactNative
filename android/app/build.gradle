@@ -83,10 +83,10 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-document-picker')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-smart-splash-screen')
     implementation project(':react-native-reanimated')
-    implementation project(':react-native-image-picker')
     implementation project(':react-native-gesture-handler')
     implementation project(':amazon-cognito-identity-js')
     implementation fileTree(dir: "libs", include: ["*.jar"])

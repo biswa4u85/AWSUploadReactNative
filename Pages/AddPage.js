@@ -4,7 +4,7 @@ import { RNS3 } from 'react-native-s3-upload';
 import { Container, Content, Form, Spinner, Button, Picker, Thumbnail } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
-import ImagePicker from 'react-native-image-picker';
+import DocumentPicker from 'react-native-document-picker';
 import { addData } from '../server/server';
 
 export default class AddPage extends Component {
@@ -18,8 +18,8 @@ export default class AddPage extends Component {
       userId: '',
       userName: '',
       mobile: '',
-      types: ['image', 'video', 'sound'],
-      type: 'image',
+      types: ['images', 'video', 'audio'],
+      type: 'images',
       filePath: null,
       fileError: null,
       tags: null,
@@ -60,58 +60,91 @@ export default class AddPage extends Component {
 
   _takePhoto = async () => {
     const { type, tags } = this.state
-    const options = {
-      title: `Select ${type}`,
-      customButtons: [
-        { name: 'customOptionKey', title: `Choose ${type} from Custom Option` },
-      ],
-      mediaType: 'mixed',
-      storageOptions: {
-        skipBackup: true,
-        path: 'images',
-      },
-    };
-    ImagePicker.showImagePicker(options, response => {
-      if (response.didCancel) {
-        alert('Cancel By User');
-      } else if (response.error) {
-        alert('Error...');
-      } else if (response.customButton) {
-        alert('Error...');
-      } else {
-        if (!tags) {
-          alert('Add a Tag');
-          return
-        }
-        let imageType = (response.type).split('/')
-        console.log(imageType)
-        // if (type != imageType[0]) {
-        //   this.setState({ fileError: `Its not a currect File` })
-        //   return
-        // } else {
-        //   this.setState({ fileError: null })
-        // }
-        this.setState({ isLoadingImg: true });
-        response['name'] = response.fileName
-        const options = {
-          keyPrefix: `${tags}/`,
-          bucket: "listfiles-files-new",
-          region: "us-east-1",
-          accessKey: "AKIAZEGHFY3HS7XVCTOL",
-          secretKey: "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",
-          successActionStatus: 201
-        }
-        RNS3.put(response, options).then(files => {
-          if (files.status !== 201) {
-            this.setState({ isLoadingImg: false });
-          } else {
-            let data = files.body
-            this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-          }
-          console.log("Failed to upload image to S3");
-        });
+    if (!tags) {
+      alert('Add a Tag');
+      return
+    }
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types[type]],
+      });
+      const response = {
+        uri: res.uri,
+        name: res.name,
+        type: res.type,
       }
-    });
+      const options = {
+        keyPrefix: `${tags}/`,
+        bucket: "listfiles-files-new",
+        region: "us-east-1",
+        accessKey: "AKIAZEGHFY3HS7XVCTOL",
+        secretKey: "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",
+        successActionStatus: 201
+      }
+      this.setState({ isLoadingImg: true });
+      RNS3.put(response, options).then(files => {
+        if (files.status !== 201) {
+          this.setState({ isLoadingImg: false });
+        } else {
+          let data = files.body
+          this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+        }
+        console.log("Failed to upload image to S3", files);
+        this.setState({ isLoadingImg: false });
+      });
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+        alert('Cancel By User');
+      } else {
+        throw err;
+      }
+    }
+    // const options = {
+    //   title: 'Select the perfect view',
+    //   takePhotoButtonTitle: `Take a ${type} ...`,
+    //   mediaType: type,
+    //   storageOptions: {
+    //     skipBackup: true,
+    //     path: 'images'
+    //   },
+    //   noData: true
+    // };
+    // ImagePicker.showImagePicker(options, response => {
+    //   if (response.didCancel) {
+    //     alert('Cancel By User');
+    //   } else if (response.error) {
+    //     alert('Error...');
+    //   } else if (response.customButton) {
+    //     alert('Error...');
+    //   } else {
+    //     this.setState({ isLoadingImg: true });
+    //     let fileType = (response.path).split('.')
+    //     let fileName = (fileType[0]).split('/')
+    //     response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
+    //     response['type'] = `${type == 'photo' ? 'image' : type}/${fileType[1]}`
+    //     const options = {
+    //       keyPrefix: `${tags}/`,
+    //       bucket: "listfiles-files-new",
+    //       region: "us-east-1",
+    //       accessKey: "AKIAZEGHFY3HS7XVCTOL",
+    //       secretKey: "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",
+    //       successActionStatus: 201
+    //     }
+    //     console.log(options)
+    //     console.log(response)
+    //     RNS3.put(response, options).then(files => {
+    //       if (files.status !== 201) {
+    //         this.setState({ isLoadingImg: false });
+    //       } else {
+    //         let data = files.body
+    //         this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+    //       }
+    //       console.log("Failed to upload image to S3", files);
+    //       this.setState({ isLoadingImg: false });
+    //     });
+    //   }
+    // });
   };
 
   randerImg() {

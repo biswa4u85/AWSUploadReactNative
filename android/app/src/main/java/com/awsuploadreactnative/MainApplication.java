@@ -3,10 +3,10 @@ package com.awsuploadreactnative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
-import com.imagepicker.ImagePickerPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.facebook.react.ReactNativeHost;
@@ -29,10 +29,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new DocumentPickerPackage(),
             new VectorIconsPackage(),
             new RCTSplashScreenPackage(),
             new ReanimatedPackage(),
-            new ImagePickerPackage(),
             new RNGestureHandlerPackage(),
             new RNAWSCognitoPackage()
       );
