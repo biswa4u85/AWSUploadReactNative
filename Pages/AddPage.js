@@ -82,7 +82,8 @@ export default class AddPage extends Component {
           alert('Add a Tag');
           return
         }
-        // let imageType = (response.type).split('/')
+        let imageType = (response.type).split('/')
+        console.log(imageType)
         // if (type != imageType[0]) {
         //   this.setState({ fileError: `Its not a currect File` })
         //   return
@@ -93,7 +94,7 @@ export default class AddPage extends Component {
         response['name'] = response.fileName
         const options = {
           keyPrefix: `${tags}/`,
-          bucket: "Listofallfiles",
+          bucket: "listfiles-files-new",
           region: "us-east-1",
           accessKey: "AKIAZEGHFY3HS7XVCTOL",
           secretKey: "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",
@@ -106,7 +107,7 @@ export default class AddPage extends Component {
             let data = files.body
             this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
           }
-          throw new Error("Failed to upload image to S3");
+          console.log("Failed to upload image to S3");
         });
       }
     });
