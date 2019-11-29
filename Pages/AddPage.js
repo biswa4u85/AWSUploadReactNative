@@ -5,7 +5,9 @@ import { Container, Content, Form, Spinner, Button, Picker, Thumbnail } from 'na
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 import DocumentPicker from 'react-native-document-picker';
+import ImagePicker from 'react-native-image-picker';
 import { addData } from '../server/server';
+const FilePickerManager = require('NativeModules').FilePickerManager;
 
 export default class AddPage extends Component {
 
@@ -73,25 +75,7 @@ export default class AddPage extends Component {
         name: res.name,
         type: res.type,
       }
-      const options = {
-        keyPrefix: `${tags}/`,
-        bucket: "listfiles-files-new",
-        region: "us-east-1",
-        accessKey: "AKIAZEGHFY3HS7XVCTOL",
-        secretKey: "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",
-        successActionStatus: 201
-      }
-      this.setState({ isLoadingImg: true });
-      RNS3.put(response, options).then(files => {
-        if (files.status !== 201) {
-          this.setState({ isLoadingImg: false });
-        } else {
-          let data = files.body
-          this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-        }
-        console.log("Failed to upload image to S3", files);
-        this.setState({ isLoadingImg: false });
-      });
+      this.uploadFile(response)
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
         // User cancelled the picker, exit any dialogs or menus and move on
@@ -146,6 +130,96 @@ export default class AddPage extends Component {
     //   }
     // });
   };
+
+  imageUpload() {
+    const options = {
+      title: 'Select the perfect view',
+      storageOptions: {
+        skipBackup: true,
+        path: 'images',
+      },
+    };
+    ImagePicker.showImagePicker(options, response => {
+      if (response.didCancel) {
+        alert('Cancel By User');
+      } else if (response.error) {
+        alert('Error...');
+      } else if (response.customButton) {
+        alert('Error...');
+      } else {
+        let fileType = (response.path).split('.')
+        let fileName = (fileType[0]).split('/')
+        response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
+        response['type'] = `image/${fileType[1]}`
+        this.uploadFile(response)
+      }
+    });
+  }
+
+  videoUpload() {
+    const options = {
+      title: 'Select the perfect view',
+      takePhotoButtonTitle: `Take a video ...`,
+      mediaType: 'video',
+      storageOptions: {
+        skipBackup: true,
+        path: 'movies',
+      },
+      noData: true
+    };
+    ImagePicker.showImagePicker(options, response => {
+      if (response.didCancel) {
+        alert('Cancel By User');
+      } else if (response.error) {
+        alert('Error...');
+      } else if (response.customButton) {
+        alert('Error...');
+      } else {
+        let fileType = (response.path).split('.')
+        let fileName = (fileType[0]).split('/')
+        response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
+        response['type'] = `video/${fileType[1]}`
+        this.uploadFile(response)
+      }
+    });
+  }
+
+  audioUpload() {
+    FilePickerManager.showFilePicker(null, (response) => {
+      if (response.didCancel) {
+        alert('Cancel By User');
+      } else if (response.error) {
+        alert('Error...');
+      } else {
+        this.uploadFile(response)
+      }
+    });
+  }
+
+  uploadFile(response) {
+    const { type, tags } = this.state
+    const options = {
+      keyPrefix: `${tags}/${type}/`,
+      bucket: "listfiles-files-new",
+      region: "us-east-1",
+      accessKey: "AKIAZEGHFY3HS7XVCTOL",
+      secretKey: "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",
+      successActionStatus: 201
+    }
+    console.log(response)
+    console.log(options)
+    // this.setState({ isLoadingImg: true });
+    // RNS3.put(response, options).then(files => {
+    //   if (files.status !== 201) {
+    //     this.setState({ isLoadingImg: false });
+    //   } else {
+    //     let data = files.body
+    //     this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+    //   }
+    //   console.log("Failed to upload image to S3", files);
+    //   this.setState({ isLoadingImg: false });
+    // });
+  }
 
   randerImg() {
     const { fileError, filePath, isLoadingImg } = this.state;

@@ -14,7 +14,8 @@ const RootStack = createStackNavigator({
   AddPage: { screen: AddPage },
 },
   {
-    initialRouteName: 'LoginPage',
+    // initialRouteName: 'LoginPage',
+    initialRouteName: 'AddPage',
   });
 
 const App = createAppContainer(RootStack);

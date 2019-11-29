@@ -3,9 +3,6 @@ platform :ios, '9.0'
 
 target 'awsuploadreactnative' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-
-  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
-
 end
 
 target 'awsuploadreactnative-tvOS' do
