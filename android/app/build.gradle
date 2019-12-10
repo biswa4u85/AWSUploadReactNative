@@ -83,7 +83,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-audio-picker')
     implementation project(':react-native-image-picker')
     implementation project(':react-native-document-picker')
     implementation project(':react-native-vector-icons')

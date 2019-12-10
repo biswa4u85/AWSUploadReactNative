@@ -7,7 +7,6 @@ import { Input } from 'react-native-elements';
 import DocumentPicker from 'react-native-document-picker';
 import ImagePicker from 'react-native-image-picker';
 import { addData } from '../server/server';
-const FilePickerManager = require('NativeModules').FilePickerManager;
 
 export default class AddPage extends Component {
 
@@ -66,74 +65,21 @@ export default class AddPage extends Component {
       alert('Add a Tag');
       return
     }
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types[type]],
-      });
-      const response = {
-        uri: res.uri,
-        name: res.name,
-        type: res.type,
-      }
-      this.uploadFile(response)
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-        alert('Cancel By User');
-      } else {
-        throw err;
-      }
+    if (type == 'images') {
+      this.imageUpload()
+    } else if (type == 'video') {
+      this.videoUpload()
+    } else {
+      this.audioUpload()
     }
-    // const options = {
-    //   title: 'Select the perfect view',
-    //   takePhotoButtonTitle: `Take a ${type} ...`,
-    //   mediaType: type,
-    //   storageOptions: {
-    //     skipBackup: true,
-    //     path: 'images'
-    //   },
-    //   noData: true
-    // };
-    // ImagePicker.showImagePicker(options, response => {
-    //   if (response.didCancel) {
-    //     alert('Cancel By User');
-    //   } else if (response.error) {
-    //     alert('Error...');
-    //   } else if (response.customButton) {
-    //     alert('Error...');
-    //   } else {
-    //     this.setState({ isLoadingImg: true });
-    //     let fileType = (response.path).split('.')
-    //     let fileName = (fileType[0]).split('/')
-    //     response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
-    //     response['type'] = `${type == 'photo' ? 'image' : type}/${fileType[1]}`
-    //     const options = {
-    //       keyPrefix: `${tags}/`,
-    //       bucket: "listfiles-files-new",
-    //       region: "us-east-1",
-    //       accessKey: "AKIAZEGHFY3HS7XVCTOL",
-    //       secretKey: "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",
-    //       successActionStatus: 201
-    //     }
-    //     console.log(options)
-    //     console.log(response)
-    //     RNS3.put(response, options).then(files => {
-    //       if (files.status !== 201) {
-    //         this.setState({ isLoadingImg: false });
-    //       } else {
-    //         let data = files.body
-    //         this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-    //       }
-    //       console.log("Failed to upload image to S3", files);
-    //       this.setState({ isLoadingImg: false });
-    //     });
-    //   }
-    // });
   };
 
   imageUpload() {
     const options = {
-      title: 'Select the perfect view',
+      title: 'Select Image',
+      customButtons: [
+        { name: 'customOptionKey', title: 'Choose Photo from Custom Option' },
+      ],
       storageOptions: {
         skipBackup: true,
         path: 'images',
@@ -147,10 +93,7 @@ export default class AddPage extends Component {
       } else if (response.customButton) {
         alert('Error...');
       } else {
-        let fileType = (response.path).split('.')
-        let fileName = (fileType[0]).split('/')
-        response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
-        response['type'] = `image/${fileType[1]}`
+        response['name'] = response.fileName
         this.uploadFile(response)
       }
     });
@@ -184,41 +127,51 @@ export default class AddPage extends Component {
     });
   }
 
-  audioUpload() {
-    FilePickerManager.showFilePicker(null, (response) => {
-      if (response.didCancel) {
-        alert('Cancel By User');
-      } else if (response.error) {
-        alert('Error...');
-      } else {
-        this.uploadFile(response)
+  async audioUpload() {
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.audio],
+      });
+      const response = {
+        uri: res.uri,
+        name: res.name,
+        type: res.type,
       }
-    });
+      this.uploadFile(response)
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+        alert('Cancel By User');
+      } else {
+        throw err;
+      }
+    }
   }
 
   uploadFile(response) {
     const { type, tags } = this.state
     const options = {
-      keyPrefix: `${tags}/${type}/`,
-      bucket: "listfiles-files-new",
+      // ${type}/
+      keyPrefix: `${tags}/`,
+      bucket: `listfiles-files-new`,
       region: "us-east-1",
       accessKey: "AKIAZEGHFY3HS7XVCTOL",
       secretKey: "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",
       successActionStatus: 201
     }
-    console.log(response)
-    console.log(options)
-    // this.setState({ isLoadingImg: true });
-    // RNS3.put(response, options).then(files => {
-    //   if (files.status !== 201) {
-    //     this.setState({ isLoadingImg: false });
-    //   } else {
-    //     let data = files.body
-    //     this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-    //   }
-    //   console.log("Failed to upload image to S3", files);
-    //   this.setState({ isLoadingImg: false });
-    // });
+    // console.log(response)
+    // console.log(options)
+    this.setState({ isLoadingImg: true });
+    RNS3.put(response, options).then(files => {
+      if (files.status !== 201) {
+        this.setState({ isLoadingImg: false });
+      } else {
+        let data = files.body
+        this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+      }
+      console.log("Failed to upload image to S3", files);
+      this.setState({ isLoadingImg: false });
+    });
   }
 
   randerImg() {
@@ -240,23 +193,6 @@ export default class AddPage extends Component {
     }
   }
 
-  // updateServiceTypes(val, type) {
-  //   const { tags } = this.state;
-  //   let tempTags = []
-  //   let value = val.toLowerCase()
-  //   if (type === 'add' && tags.indexOf(value) === -1) {
-  //     tags.push(value)
-  //     tempTags = tags
-  //   } else if (type === 'remove') {
-  //     for (let item of tags) {
-  //       if (item != val) {
-  //         tempTags.push(item)
-  //       }
-  //     }
-  //   }
-  //   this.setState({ tags: tempTags, newTag: '' })
-  // }
-
   render() {
     const { isLoading, types, type, tags, newTag } = this.state
     return (
@@ -277,9 +213,6 @@ export default class AddPage extends Component {
               </Picker>
             </View>
             <View>
-              {/* <View style={{ flexDirection: 'row', flexWrap: 'wrap', paddingVertical: 10 }}>
-              {tags.map((item, key) => <View key={key} style={{ backgroundColor: '#ff0000', flexDirection: 'row', margin: 5, padding: 5 }}><Text style={{ fontSize: 16, color: '#000' }}>{item}</Text><TouchableOpacity onPress={() => this.updateServiceTypes(item, 'remove')}><Icon style={{ fontSize: 16, color: '#fff' }} type={'AntDesign'} name={'close'} /></TouchableOpacity></View>)}
-            </View> */}
               <View>
                 <Input
                   placeholder='Insert tag'
@@ -292,7 +225,6 @@ export default class AddPage extends Component {
                   returnKeyType="done"
                   placeholderTextColor="black"
                   onChangeText={(tags) => this.setState({ tags })}
-                  // onSubmitEditing={() => this.updateServiceTypes(newTag, 'add')}
                   leftIcon={
                     <Icon
                       name='user'
