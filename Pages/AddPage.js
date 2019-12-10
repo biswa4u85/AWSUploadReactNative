@@ -11,6 +11,8 @@ import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 
 export default class AddPage extends Component {
 
+  audioRecorderPlayer = new AudioRecorderPlayer();
+
   constructor(props) {
     super(props);
     this.state = {
@@ -76,12 +78,11 @@ export default class AddPage extends Component {
   };
 
   _recordAudio = async () => {
-    const audioRecorderPlayer = new AudioRecorderPlayer();
-    const result = await audioRecorderPlayer.startRecorder();
-    audioRecorderPlayer.addRecordBackListener((e) => {
+    const result = await this.audioRecorderPlayer.startRecorder();
+    this.audioRecorderPlayer.addRecordBackListener((e) => {
       this.setState({
         recordSecs: e.current_position,
-        recordTime: audioRecorderPlayer.mmssss(
+        recordTime: this.audioRecorderPlayer.mmssss(
           Math.floor(e.current_position),
         ),
       });
