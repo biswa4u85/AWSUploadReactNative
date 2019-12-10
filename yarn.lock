@@ -2262,6 +2262,11 @@ domexception@^1.0.1:
   dependencies:
     webidl-conversions "^4.0.2"
 
+dooboolab-welcome@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dooboolab-welcome/-/dooboolab-welcome-1.1.1.tgz#ca2184f6e1f568865d707a6ce3bda7e003550f54"
+  integrity sha512-tQ/9NBCGnalHwKOBjDqTD4t4wQpDfSSbxQGctzkzaLHR3AhN0wCBkIs05JciVtvl/jfLZ+DgAndktAMk3Bu7Vw==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -5533,10 +5538,12 @@ react-native-animatable@^1.3.2:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-audio-picker@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/react-native-audio-picker/-/react-native-audio-picker-0.0.9.tgz#7e540e1d191934148057a1e16b157401e8683d4f"
-  integrity sha512-G8NStFo9EoVt67NwY7Dp492J9q+I1ZNOh/zDMkbtXN0VCSTwIzEbK3Qs3RIyFXty3CAdvsge/dW8iMWAISqnTw==
+react-native-audio-recorder-player@^2.4.4-rc.1:
+  version "2.4.4-rc.1"
+  resolved "https://registry.yarnpkg.com/react-native-audio-recorder-player/-/react-native-audio-recorder-player-2.4.4-rc.1.tgz#8f8e9dca8b7e43f5ee4327761b944ea9936f9937"
+  integrity sha512-OdPfVCPKimpA7D+fSu+k2SNCpedWpaqfcE+W25oj0T6LPqv0JLGsTRSRLWSFXHeCC/Zofc8+GdZH4PU7IZ1b3w==
+  dependencies:
+    dooboolab-welcome "^1.1.1"
 
 react-native-document-picker@^3.2.4:
   version "3.2.4"
