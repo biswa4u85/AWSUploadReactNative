@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.68
 # min_api: 16
-# pg_map_id: a9a64d9
+# pg_map_id: 8e429be
 androidx.appcompat.R$attr -> a.a.a:
 androidx.appcompat.R$bool -> a.a.b:
 androidx.appcompat.R$color -> a.a.c:
@@ -204,15 +204,19 @@ androidx.appcompat.app.AlertDialog$Builder -> androidx.appcompat.app.c$a:
     int mTheme -> b
     androidx.appcompat.app.AlertDialog create() -> a
     androidx.appcompat.app.AlertDialog$Builder setAdapter(android.widget.ListAdapter,android.content.DialogInterface$OnClickListener) -> a
+    androidx.appcompat.app.AlertDialog$Builder setCancelable(boolean) -> a
     androidx.appcompat.app.AlertDialog$Builder setCustomTitle(android.view.View) -> a
     androidx.appcompat.app.AlertDialog$Builder setIcon(android.graphics.drawable.Drawable) -> a
+    androidx.appcompat.app.AlertDialog$Builder setMessage(java.lang.CharSequence) -> a
+    androidx.appcompat.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener) -> a
     androidx.appcompat.app.AlertDialog$Builder setOnKeyListener(android.content.DialogInterface$OnKeyListener) -> a
-    androidx.appcompat.app.AlertDialog$Builder setTitle(java.lang.CharSequence) -> a
     android.content.Context getContext() -> b
+    androidx.appcompat.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener) -> b
+    androidx.appcompat.app.AlertDialog$Builder setTitle(java.lang.CharSequence) -> b
 androidx.appcompat.app.AppCompatActivity -> androidx.appcompat.app.d:
-    int mThemeId -> n
-    android.content.res.Resources mResources -> o
-    androidx.appcompat.app.AppCompatDelegate mDelegate -> m
+    int mThemeId -> o
+    android.content.res.Resources mResources -> p
+    androidx.appcompat.app.AppCompatDelegate mDelegate -> n
     void onCreateSupportNavigateUpTaskStack(androidx.core.app.TaskStackBuilder) -> a
     void onSupportActionModeStarted(androidx.appcompat.view.ActionMode) -> a
     androidx.appcompat.view.ActionMode onWindowStartingSupportActionMode(androidx.appcompat.view.ActionMode$Callback) -> a
@@ -3134,9 +3138,17 @@ androidx.core.app.ActivityCompat -> androidx.core.app.a:
     androidx.core.app.ActivityCompat$PermissionCompatDelegate sDelegate -> c
     void finishAffinity(android.app.Activity) -> a
     androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate() -> a
-androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback -> androidx.core.app.a$a:
-androidx.core.app.ActivityCompat$PermissionCompatDelegate -> androidx.core.app.a$b:
-androidx.core.app.ActivityCompat$RequestPermissionsRequestCodeValidator -> androidx.core.app.a$c:
+    void requestPermissions(android.app.Activity,java.lang.String[],int) -> a
+    boolean shouldShowRequestPermissionRationale(android.app.Activity,java.lang.String) -> a
+androidx.core.app.ActivityCompat$1 -> androidx.core.app.a$a:
+    int val$requestCode -> d
+    android.app.Activity val$activity -> c
+    java.lang.String[] val$permissions -> b
+androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback -> androidx.core.app.a$b:
+androidx.core.app.ActivityCompat$PermissionCompatDelegate -> androidx.core.app.a$c:
+    boolean requestPermissions(android.app.Activity,java.lang.String[],int) -> a
+androidx.core.app.ActivityCompat$RequestPermissionsRequestCodeValidator -> androidx.core.app.a$d:
+    void validateRequestPermissionsRequestCode(int) -> a
 androidx.core.app.AppOpsManagerCompat -> androidx.core.app.b:
     int noteProxyOpNoThrow(android.content.Context,java.lang.String,java.lang.String) -> a
     java.lang.String permissionToOp(java.lang.String) -> a
@@ -3175,19 +3187,42 @@ androidx.core.content.ContextCompat -> a.d.d.a:
     java.lang.Object sLock -> a
     int checkSelfPermission(android.content.Context,java.lang.String) -> a
     int getColor(android.content.Context,int) -> a
+    java.io.File[] getExternalCacheDirs(android.content.Context) -> a
     boolean startActivities(android.content.Context,android.content.Intent[],android.os.Bundle) -> a
     android.content.res.ColorStateList getColorStateList(android.content.Context,int) -> b
+    java.io.File[] getExternalFilesDirs(android.content.Context,java.lang.String) -> b
     android.graphics.drawable.Drawable getDrawable(android.content.Context,int) -> c
-androidx.core.content.PermissionChecker -> a.d.d.b:
+androidx.core.content.FileProvider -> a.d.d.b:
+    java.io.File DEVICE_ROOT -> d
+    androidx.core.content.FileProvider$PathStrategy mStrategy -> b
+    java.util.HashMap sCache -> e
+    java.lang.String[] COLUMNS -> c
+    java.io.File buildPath(java.io.File,java.lang.String[]) -> a
+    java.lang.Object[] copyOf(java.lang.Object[],int) -> a
+    java.lang.String[] copyOf(java.lang.String[],int) -> a
+    androidx.core.content.FileProvider$PathStrategy getPathStrategy(android.content.Context,java.lang.String) -> a
+    android.net.Uri getUriForFile(android.content.Context,java.lang.String,java.io.File) -> a
+    int modeToMode(java.lang.String) -> a
+    androidx.core.content.FileProvider$PathStrategy parsePathStrategy(android.content.Context,java.lang.String) -> b
+androidx.core.content.FileProvider$PathStrategy -> a.d.d.b$a:
+    java.io.File getFileForUri(android.net.Uri) -> a
+    android.net.Uri getUriForFile(java.io.File) -> a
+androidx.core.content.FileProvider$SimplePathStrategy -> a.d.d.b$b:
+    java.util.HashMap mRoots -> b
+    java.lang.String mAuthority -> a
+    void addRoot(java.lang.String,java.io.File) -> a
+    java.io.File getFileForUri(android.net.Uri) -> a
+    android.net.Uri getUriForFile(java.io.File) -> a
+androidx.core.content.PermissionChecker -> a.d.d.c:
     int checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String) -> a
     int checkSelfPermission(android.content.Context,java.lang.String) -> a
-androidx.core.content.res.ColorStateListInflaterCompat -> a.d.d.c.a:
+androidx.core.content.res.ColorStateListInflaterCompat -> a.d.d.d.a:
     android.content.res.ColorStateList createFromXml(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.content.res.Resources$Theme) -> a
     android.content.res.ColorStateList createFromXmlInner(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme) -> a
     int modulateColorAlpha(int,float) -> a
     android.content.res.TypedArray obtainAttributes(android.content.res.Resources,android.content.res.Resources$Theme,android.util.AttributeSet,int[]) -> a
     android.content.res.ColorStateList inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme) -> b
-androidx.core.content.res.ComplexColorCompat -> a.d.d.c.b:
+androidx.core.content.res.ComplexColorCompat -> a.d.d.d.b:
     android.content.res.ColorStateList mColorStateList -> b
     android.graphics.Shader mShader -> a
     int mColor -> c
@@ -3203,7 +3238,7 @@ androidx.core.content.res.ComplexColorCompat -> a.d.d.c.b:
     boolean isGradient() -> c
     boolean isStateful() -> d
     boolean willDraw() -> e
-androidx.core.content.res.FontResourcesParserCompat -> a.d.d.c.c:
+androidx.core.content.res.FontResourcesParserCompat -> a.d.d.d.c:
     int getType(android.content.res.TypedArray,int) -> a
     androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry parse(org.xmlpull.v1.XmlPullParser,android.content.res.Resources) -> a
     java.util.List readCerts(android.content.res.Resources,int) -> a
@@ -3212,11 +3247,11 @@ androidx.core.content.res.FontResourcesParserCompat -> a.d.d.c.c:
     androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry readFamilies(org.xmlpull.v1.XmlPullParser,android.content.res.Resources) -> b
     androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry readFamily(org.xmlpull.v1.XmlPullParser,android.content.res.Resources) -> c
     androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry readFont(org.xmlpull.v1.XmlPullParser,android.content.res.Resources) -> d
-androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry -> a.d.d.c.c$a:
-androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry -> a.d.d.c.c$b:
+androidx.core.content.res.FontResourcesParserCompat$FamilyResourceEntry -> a.d.d.d.c$a:
+androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry -> a.d.d.d.c$b:
     androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry[] mEntries -> a
     androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry[] getEntries() -> a
-androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry -> a.d.d.c.c$c:
+androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry -> a.d.d.d.c$c:
     int mResourceId -> f
     java.lang.String mFileName -> a
     int mTtcIndex -> e
@@ -3229,42 +3264,42 @@ androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry -> a.d
     java.lang.String getVariationSettings() -> d
     int getWeight() -> e
     boolean isItalic() -> f
-androidx.core.content.res.FontResourcesParserCompat$ProviderResourceEntry -> a.d.d.c.c$d:
+androidx.core.content.res.FontResourcesParserCompat$ProviderResourceEntry -> a.d.d.d.c$d:
     androidx.core.provider.FontRequest mRequest -> a
     int mTimeoutMs -> b
     int mStrategy -> c
     int getFetchStrategy() -> a
     androidx.core.provider.FontRequest getRequest() -> b
     int getTimeout() -> c
-androidx.core.content.res.GradientColorInflaterCompat -> a.d.d.c.d:
+androidx.core.content.res.GradientColorInflaterCompat -> a.d.d.d.d:
     androidx.core.content.res.GradientColorInflaterCompat$ColorStops checkColors(androidx.core.content.res.GradientColorInflaterCompat$ColorStops,int,int,boolean,int) -> a
     android.graphics.Shader createFromXmlInner(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme) -> a
     android.graphics.Shader$TileMode parseTileMode(int) -> a
     androidx.core.content.res.GradientColorInflaterCompat$ColorStops inflateChildElements(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme) -> b
-androidx.core.content.res.GradientColorInflaterCompat$ColorStops -> a.d.d.c.d$a:
+androidx.core.content.res.GradientColorInflaterCompat$ColorStops -> a.d.d.d.d$a:
     int[] mColors -> a
     float[] mOffsets -> b
-androidx.core.content.res.GrowingArrayUtils -> a.d.d.c.e:
+androidx.core.content.res.GrowingArrayUtils -> a.d.d.d.e:
     int[] append(int[],int,int) -> a
     java.lang.Object[] append(java.lang.Object[],int,java.lang.Object) -> a
     int growSize(int) -> a
-androidx.core.content.res.ResourcesCompat -> a.d.d.c.f:
+androidx.core.content.res.ResourcesCompat -> a.d.d.d.f:
     android.graphics.drawable.Drawable getDrawable(android.content.res.Resources,int,android.content.res.Resources$Theme) -> a
     android.graphics.Typeface getFont(android.content.Context,int,android.util.TypedValue,int,androidx.core.content.res.ResourcesCompat$FontCallback) -> a
     android.graphics.Typeface loadFont(android.content.Context,int,android.util.TypedValue,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean) -> a
     android.graphics.Typeface loadFont(android.content.Context,android.content.res.Resources,android.util.TypedValue,int,int,androidx.core.content.res.ResourcesCompat$FontCallback,android.os.Handler,boolean) -> a
-androidx.core.content.res.ResourcesCompat$FontCallback -> a.d.d.c.f$a:
+androidx.core.content.res.ResourcesCompat$FontCallback -> a.d.d.d.f$a:
     void callbackFailAsync(int,android.os.Handler) -> a
     void callbackSuccessAsync(android.graphics.Typeface,android.os.Handler) -> a
     void onFontRetrievalFailed(int) -> a
     void onFontRetrieved(android.graphics.Typeface) -> a
-androidx.core.content.res.ResourcesCompat$FontCallback$1 -> a.d.d.c.f$a$a:
+androidx.core.content.res.ResourcesCompat$FontCallback$1 -> a.d.d.d.f$a$a:
     android.graphics.Typeface val$typeface -> b
     androidx.core.content.res.ResourcesCompat$FontCallback this$0 -> c
-androidx.core.content.res.ResourcesCompat$FontCallback$2 -> a.d.d.c.f$a$b:
+androidx.core.content.res.ResourcesCompat$FontCallback$2 -> a.d.d.d.f$a$b:
     int val$reason -> b
     androidx.core.content.res.ResourcesCompat$FontCallback this$0 -> c
-androidx.core.content.res.TypedArrayUtils -> a.d.d.c.g:
+androidx.core.content.res.TypedArrayUtils -> a.d.d.d.g:
     boolean getNamedBoolean(android.content.res.TypedArray,org.xmlpull.v1.XmlPullParser,java.lang.String,int,boolean) -> a
     int getNamedColor(android.content.res.TypedArray,org.xmlpull.v1.XmlPullParser,java.lang.String,int,int) -> a
     androidx.core.content.res.ComplexColorCompat getNamedComplexColor(android.content.res.TypedArray,org.xmlpull.v1.XmlPullParser,android.content.res.Resources$Theme,java.lang.String,int,int) -> a
@@ -4659,22 +4694,24 @@ androidx.fragment.app.Fragment$OnStartEnterTransitionListener -> a.h.a.d$f:
     void onStartEnterTransition() -> a
     void startListening() -> b
 androidx.fragment.app.FragmentActivity -> a.h.a.e:
+    int mNextCandidateRequestIndex -> l
     android.os.Handler mHandler -> c
-    boolean mStartedIntentSenderFromFragment -> i
+    boolean mRequestedPermissionsFromFragment -> i
     androidx.fragment.app.FragmentController mFragments -> d
-    boolean mStartedActivityFromFragment -> j
-    int mNextCandidateRequestIndex -> k
+    boolean mStartedIntentSenderFromFragment -> j
     androidx.lifecycle.ViewModelStore mViewModelStore -> e
+    boolean mStartedActivityFromFragment -> k
     boolean mCreated -> f
     boolean mResumed -> g
+    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> m
     boolean mStopped -> h
-    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> l
-    void checkForValidRequestCode(int) -> a
     android.view.View dispatchFragmentsOnCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
     androidx.lifecycle.Lifecycle getLifecycle() -> a
     boolean markState(androidx.fragment.app.FragmentManager,androidx.lifecycle.Lifecycle$State) -> a
     void onAttachFragment(androidx.fragment.app.Fragment) -> a
     boolean onPrepareOptionsPanel(android.view.View,android.view.Menu) -> a
+    void validateRequestPermissionsRequestCode(int) -> a
+    void checkForValidRequestCode(int) -> b
     androidx.lifecycle.ViewModelStore getViewModelStore() -> c
     androidx.fragment.app.FragmentManager getSupportFragmentManager() -> e
     void onResumeFragments() -> f
@@ -10904,7 +10941,7 @@ com.facebook.react.R$string -> c.a.m.g:
 com.facebook.react.R$style -> c.a.m.h:
 com.facebook.react.R$xml -> c.a.m.i:
 com.facebook.react.ReactActivity -> c.a.m.j:
-    com.facebook.react.ReactActivityDelegate mDelegate -> p
+    com.facebook.react.ReactActivityDelegate mDelegate -> q
     void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener) -> a
     void invokeDefaultOnBackPressed() -> b
     com.facebook.react.ReactActivityDelegate createReactActivityDelegate() -> m
@@ -15307,6 +15344,120 @@ com.facebook.yoga.YogaWrap -> com.facebook.yoga.YogaWrap:
     com.facebook.yoga.YogaWrap WRAP -> d
     int mIntValue -> b
     int intValue() -> a
+com.imagepicker.ImagePickerModule$1 -> com.imagepicker.ImagePickerModule$a:
+    com.imagepicker.ImagePickerModule this$0 -> b
+com.imagepicker.ImagePickerModule$2 -> com.imagepicker.ImagePickerModule$b:
+    void onCustomButton(com.imagepicker.ImagePickerModule,java.lang.String) -> a
+    void onUseLibrary(com.imagepicker.ImagePickerModule) -> a
+    void onTakePhoto(com.imagepicker.ImagePickerModule) -> b
+    void onCancel(com.imagepicker.ImagePickerModule) -> c
+com.imagepicker.ImagePickerModule$3 -> com.imagepicker.ImagePickerModule$c:
+    void onCancel(java.lang.ref.WeakReference,android.content.DialogInterface) -> a
+    void onReTry(java.lang.ref.WeakReference,android.content.DialogInterface) -> b
+com.imagepicker.ImagePickerPackage -> com.imagepicker.a:
+    int dialogThemeId -> a
+    java.util.List createNativeModules(com.facebook.react.bridge.ReactApplicationContext) -> a
+    java.util.List createViewManagers(com.facebook.react.bridge.ReactApplicationContext) -> b
+com.imagepicker.R$layout -> com.imagepicker.b:
+com.imagepicker.R$style -> com.imagepicker.c:
+com.imagepicker.ResponseHelper -> com.imagepicker.d:
+    com.facebook.react.bridge.WritableMap response -> a
+    void cleanResponse() -> a
+    void invokeCancel(com.facebook.react.bridge.Callback) -> a
+    void invokeCustomButton(com.facebook.react.bridge.Callback,java.lang.String) -> a
+    void putBoolean(java.lang.String,boolean) -> a
+    void putDouble(java.lang.String,double) -> a
+    void putInt(java.lang.String,int) -> a
+    void putString(java.lang.String,java.lang.String) -> a
+    void invokeError(com.facebook.react.bridge.Callback,java.lang.String) -> b
+    void invokeResponse(com.facebook.react.bridge.Callback) -> b
+com.imagepicker.media.ImageConfig -> com.imagepicker.e.a:
+    java.io.File resized -> b
+    java.io.File original -> a
+    int rotation -> f
+    int maxHeight -> d
+    boolean saveToCameraRoll -> g
+    int quality -> e
+    int maxWidth -> c
+    java.io.File getActualFile() -> a
+    com.imagepicker.media.ImageConfig updateFromOptions(com.facebook.react.bridge.ReadableMap) -> a
+    boolean useOriginal(int,int,int) -> a
+    com.imagepicker.media.ImageConfig withMaxHeight(int) -> a
+    com.imagepicker.media.ImageConfig withOriginalFile(java.io.File) -> a
+    com.imagepicker.media.ImageConfig withMaxWidth(int) -> b
+    com.imagepicker.media.ImageConfig withResizedFile(java.io.File) -> b
+com.imagepicker.permissions.OnImagePickerPermissionsCallback -> com.imagepicker.f.a:
+    void setPermissionListener(com.facebook.react.modules.core.PermissionListener) -> a
+com.imagepicker.permissions.PermissionUtils -> com.imagepicker.f.b:
+    androidx.appcompat.app.AlertDialog explainingDialog(com.imagepicker.ImagePickerModule,com.facebook.react.bridge.ReadableMap,com.imagepicker.permissions.PermissionUtils$OnExplainingPermissionCallback) -> a
+com.imagepicker.permissions.PermissionUtils$1 -> com.imagepicker.f.b$a:
+    com.imagepicker.permissions.PermissionUtils$OnExplainingPermissionCallback val$callback -> b
+    java.lang.ref.WeakReference val$reference -> c
+com.imagepicker.permissions.PermissionUtils$2 -> com.imagepicker.f.b$b:
+    com.imagepicker.permissions.PermissionUtils$OnExplainingPermissionCallback val$callback -> b
+    java.lang.ref.WeakReference val$reference -> c
+com.imagepicker.permissions.PermissionUtils$OnExplainingPermissionCallback -> com.imagepicker.f.b$c:
+    void onCancel(java.lang.ref.WeakReference,android.content.DialogInterface) -> a
+    void onReTry(java.lang.ref.WeakReference,android.content.DialogInterface) -> b
+com.imagepicker.utils.ButtonsHelper -> com.imagepicker.g.a:
+    java.util.List customButtons -> d
+    com.imagepicker.utils.ButtonsHelper$Item btnLibrary -> b
+    com.imagepicker.utils.ButtonsHelper$Item btnCancel -> c
+    com.imagepicker.utils.ButtonsHelper$Item btnCamera -> a
+    java.util.List getActions() -> a
+    java.util.LinkedList getCustomButtons(com.facebook.react.bridge.ReadableMap) -> a
+    com.imagepicker.utils.ButtonsHelper$Item getItemFromOption(com.facebook.react.bridge.ReadableMap,java.lang.String,java.lang.String) -> a
+    java.util.List getTitles() -> b
+    com.imagepicker.utils.ButtonsHelper newInstance(com.facebook.react.bridge.ReadableMap) -> b
+com.imagepicker.utils.ButtonsHelper$Item -> com.imagepicker.g.a$a:
+    java.lang.String title -> a
+    java.lang.String action -> b
+com.imagepicker.utils.MediaUtils -> com.imagepicker.g.b:
+    java.io.File createNewFile(android.content.Context,com.facebook.react.bridge.ReadableMap,boolean) -> a
+    void fileScan(android.content.Context,java.lang.String) -> a
+    com.imagepicker.media.ImageConfig getResizedImage(android.content.Context,com.facebook.react.bridge.ReadableMap,com.imagepicker.media.ImageConfig,int,int,int) -> a
+    void moveFile(java.io.File,java.io.File) -> a
+    com.imagepicker.utils.MediaUtils$ReadExifResult readExifInterface(com.imagepicker.ResponseHelper,com.imagepicker.media.ImageConfig) -> a
+    void removeUselessFiles(int,com.imagepicker.media.ImageConfig) -> a
+    com.imagepicker.utils.MediaUtils$RolloutPhotoResult rolloutPhotoFromCamera(com.imagepicker.media.ImageConfig) -> a
+com.imagepicker.utils.MediaUtils$1 -> com.imagepicker.g.b$a:
+com.imagepicker.utils.MediaUtils$ReadExifResult -> com.imagepicker.g.b$b:
+    java.lang.Throwable error -> b
+    int currentRotation -> a
+com.imagepicker.utils.MediaUtils$RolloutPhotoResult -> com.imagepicker.g.b$c:
+    java.lang.Throwable error -> b
+    com.imagepicker.media.ImageConfig imageConfig -> a
+com.imagepicker.utils.ReadableMapUtils -> com.imagepicker.g.c:
+    boolean hasAndNotEmpty(java.lang.Class,com.facebook.react.bridge.ReadableMap,java.lang.String) -> a
+    boolean hasAndNotEmptyString(com.facebook.react.bridge.ReadableMap,java.lang.String) -> a
+    boolean hasAndNotNullReadableMap(com.facebook.react.bridge.ReadableMap,java.lang.String) -> b
+com.imagepicker.utils.RealPathUtil -> com.imagepicker.g.d:
+    android.net.Uri compatUriFromFile(android.content.Context,java.io.File) -> a
+    java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[]) -> a
+    java.lang.String getFileProviderPath(android.content.Context,android.net.Uri) -> a
+    boolean isDownloadsDocument(android.net.Uri) -> a
+    java.lang.String getRealPathFromURI(android.content.Context,android.net.Uri) -> b
+    boolean isExternalStorageDocument(android.net.Uri) -> b
+    boolean isFileProviderUri(android.content.Context,android.net.Uri) -> c
+    boolean isGooglePhotosUri(android.net.Uri) -> c
+    boolean isMediaDocument(android.net.Uri) -> d
+com.imagepicker.utils.UI -> com.imagepicker.g.e:
+    androidx.appcompat.app.AlertDialog chooseDialog(com.imagepicker.ImagePickerModule,com.facebook.react.bridge.ReadableMap,com.imagepicker.utils.UI$OnAction) -> a
+com.imagepicker.utils.UI$1 -> com.imagepicker.g.e$a:
+    java.util.List val$actions -> b
+    com.imagepicker.utils.UI$OnAction val$callback -> c
+    java.lang.ref.WeakReference val$reference -> d
+com.imagepicker.utils.UI$2 -> com.imagepicker.g.e$b:
+    com.imagepicker.utils.UI$OnAction val$callback -> b
+    java.lang.ref.WeakReference val$reference -> c
+com.imagepicker.utils.UI$3 -> com.imagepicker.g.e$c:
+    com.imagepicker.utils.UI$OnAction val$callback -> b
+    java.lang.ref.WeakReference val$reference -> c
+com.imagepicker.utils.UI$OnAction -> com.imagepicker.g.e$d:
+    void onCustomButton(com.imagepicker.ImagePickerModule,java.lang.String) -> a
+    void onUseLibrary(com.imagepicker.ImagePickerModule) -> a
+    void onTakePhoto(com.imagepicker.ImagePickerModule) -> b
+    void onCancel(com.imagepicker.ImagePickerModule) -> c
 com.oblador.vectoricons.VectorIconsPackage -> com.oblador.vectoricons.a:
     java.util.List createNativeModules(com.facebook.react.bridge.ReactApplicationContext) -> a
     java.util.List createViewManagers(com.facebook.react.bridge.ReactApplicationContext) -> b
@@ -16181,7 +16332,7 @@ com.swmansion.reanimated.transitions.TransitionUtils -> com.swmansion.reanimated
     androidx.transition.Transition inflateIn(com.facebook.react.bridge.ReadableMap) -> d
     androidx.transition.Transition inflateOut(com.facebook.react.bridge.ReadableMap) -> e
 io.github.elyx0.reactnativedocumentpicker.DocumentPickerModule$1 -> io.github.elyx0.reactnativedocumentpicker.DocumentPickerModule$a:
-    io.github.elyx0.reactnativedocumentpicker.DocumentPickerModule this$0 -> a
+    io.github.elyx0.reactnativedocumentpicker.DocumentPickerModule this$0 -> b
 io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage -> io.github.elyx0.reactnativedocumentpicker.a:
     java.util.List createNativeModules(com.facebook.react.bridge.ReactApplicationContext) -> a
     java.util.List createViewManagers(com.facebook.react.bridge.ReactApplicationContext) -> b

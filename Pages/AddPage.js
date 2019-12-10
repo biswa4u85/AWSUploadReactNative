@@ -7,7 +7,6 @@ import { Input } from 'react-native-elements';
 import DocumentPicker from 'react-native-document-picker';
 import ImagePicker from 'react-native-image-picker';
 import { addData } from '../server/server';
-const FilePickerManager = require('NativeModules').FilePickerManager;
 
 export default class AddPage extends Component {
 
@@ -66,28 +65,21 @@ export default class AddPage extends Component {
       alert('Add a Tag');
       return
     }
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types[type]],
-      });
-      const response = {
-        uri: res.uri,
-        name: res.name,
-        type: res.type,
-      }
-      this.uploadFile(response)
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        alert('Cancel By User');
-      } else {
-        throw err;
-      }
+    if (type == 'images') {
+      this.imageUpload()
+    } else if (type == 'video') {
+      this.videoUpload()
+    } else {
+      this.audioUpload()
     }
   };
 
   imageUpload() {
     const options = {
-      title: 'Select the perfect view',
+      title: 'Select Image',
+      customButtons: [
+        { name: 'customOptionKey', title: 'Choose Photo from Custom Option' },
+      ],
       storageOptions: {
         skipBackup: true,
         path: 'images',
@@ -101,10 +93,7 @@ export default class AddPage extends Component {
       } else if (response.customButton) {
         alert('Error...');
       } else {
-        let fileType = (response.path).split('.')
-        let fileName = (fileType[0]).split('/')
-        response['name'] = `${fileName[fileName.length - 1]}.${fileType[1]}`
-        response['type'] = `image/${fileType[1]}`
+        response['name'] = response.fileName
         this.uploadFile(response)
       }
     });
@@ -138,41 +127,51 @@ export default class AddPage extends Component {
     });
   }
 
-  audioUpload() {
-    FilePickerManager.showFilePicker(null, (response) => {
-      if (response.didCancel) {
-        alert('Cancel By User');
-      } else if (response.error) {
-        alert('Error...');
-      } else {
-        this.uploadFile(response)
+  async audioUpload() {
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.audio],
+      });
+      const response = {
+        uri: res.uri,
+        name: res.name,
+        type: res.type,
       }
-    });
+      this.uploadFile(response)
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        // User cancelled the picker, exit any dialogs or menus and move on
+        alert('Cancel By User');
+      } else {
+        throw err;
+      }
+    }
   }
 
   uploadFile(response) {
     const { type, tags } = this.state
     const options = {
-      keyPrefix: `${tags}/${type}/`,
-      bucket: "listfiles-files-new",
+      // ${type}/
+      keyPrefix: `${tags}/`,
+      bucket: `listfiles-files-new`,
       region: "us-east-1",
       accessKey: "AKIAZEGHFY3HS7XVCTOL",
       secretKey: "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",
       successActionStatus: 201
     }
-    console.log(response)
-    console.log(options)
-    // this.setState({ isLoadingImg: true });
-    // RNS3.put(response, options).then(files => {
-    //   if (files.status !== 201) {
-    //     this.setState({ isLoadingImg: false });
-    //   } else {
-    //     let data = files.body
-    //     this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-    //   }
-    //   console.log("Failed to upload image to S3", files);
-    //   this.setState({ isLoadingImg: false });
-    // });
+    // console.log(response)
+    // console.log(options)
+    this.setState({ isLoadingImg: true });
+    RNS3.put(response, options).then(files => {
+      if (files.status !== 201) {
+        this.setState({ isLoadingImg: false });
+      } else {
+        let data = files.body
+        this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+      }
+      console.log("Failed to upload image to S3", files);
+      this.setState({ isLoadingImg: false });
+    });
   }
 
   randerImg() {
