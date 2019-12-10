@@ -176,19 +176,19 @@ export default class AddPage extends Component {
       secretKey: "lTPP3MnrigXnJcrlSJkjka5i1S8ms8JSqdGzf8Aj",
       successActionStatus: 201
     }
-    console.log(response)
-    console.log(options)
-    // this.setState({ isLoadingImg: true });
-    // RNS3.put(response, options).then(files => {
-    //   if (files.status !== 201) {
-    //     this.setState({ isLoadingImg: false });
-    //   } else {
-    //     let data = files.body
-    //     this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-    //   }
-    //   console.log("Failed to upload image to S3", files);
-    //   this.setState({ isLoadingImg: false });
-    // });
+    // console.log(response)
+    // console.log(options)
+    this.setState({ isLoadingImg: true });
+    RNS3.put(response, options).then(files => {
+      if (files.status !== 201) {
+        this.setState({ isLoadingImg: false });
+      } else {
+        let data = files.body
+        this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+      }
+      console.log("Failed to upload image to S3", files);
+      this.setState({ isLoadingImg: false });
+    });
   }
 
   randerImg() {
