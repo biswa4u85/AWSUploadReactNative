@@ -7,6 +7,7 @@ import { Input } from 'react-native-elements';
 import DocumentPicker from 'react-native-document-picker';
 import ImagePicker from 'react-native-image-picker';
 import { addData } from '../server/server';
+import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 
 export default class AddPage extends Component {
 
@@ -72,6 +73,21 @@ export default class AddPage extends Component {
     } else {
       this.audioUpload()
     }
+  };
+
+  _recordAudio = async () => {
+    const audioRecorderPlayer = new AudioRecorderPlayer();
+    const result = await audioRecorderPlayer.startRecorder();
+    audioRecorderPlayer.addRecordBackListener((e) => {
+      this.setState({
+        recordSecs: e.current_position,
+        recordTime: audioRecorderPlayer.mmssss(
+          Math.floor(e.current_position),
+        ),
+      });
+      return;
+    });
+    console.log(result);
   };
 
   imageUpload() {
@@ -159,34 +175,38 @@ export default class AddPage extends Component {
       secretKey: "lTPP3MnrigXnJcrlSJkjka5i1S8ms8JSqdGzf8Aj",
       successActionStatus: 201
     }
-    // console.log(response)
-    // console.log(options)
-    this.setState({ isLoadingImg: true });
-    RNS3.put(response, options).then(files => {
-      if (files.status !== 201) {
-        this.setState({ isLoadingImg: false });
-      } else {
-        let data = files.body
-        this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
-      }
-      console.log("Failed to upload image to S3", files);
-      this.setState({ isLoadingImg: false });
-    });
+    console.log(response)
+    console.log(options)
+    // this.setState({ isLoadingImg: true });
+    // RNS3.put(response, options).then(files => {
+    //   if (files.status !== 201) {
+    //     this.setState({ isLoadingImg: false });
+    //   } else {
+    //     let data = files.body
+    //     this.setState({ filePath: data.postResponse.location, isLoadingImg: false });
+    //   }
+    //   console.log("Failed to upload image to S3", files);
+    //   this.setState({ isLoadingImg: false });
+    // });
   }
 
   randerImg() {
-    const { fileError, filePath, isLoadingImg } = this.state;
+    const { fileError, filePath, isLoadingImg, type } = this.state;
     if (isLoadingImg) {
       return <View style={{ flexDirection: 'column', alignItems: 'center', marginTop: 20 }}>
         <Spinner color='#ff0000' />
       </View>
     } else {
       return <View style={{ flexDirection: 'column', alignItems: 'center', marginTop: 20 }}>
+        {type == 'audio' ?
+          <TouchableOpacity onPress={this._recordAudio}>
+            <Text>RECORD AUDIO</Text>
+          </TouchableOpacity> : null}
         <TouchableOpacity onPress={this._takePhoto}>
           <View>
             {fileError ? <Text style={{ color: '#ff0000', fontSize: 12 }}>{fileError}</Text> : null}
             {filePath ? <Thumbnail square large source={{ uri: filePath }} /> : <Icon name='file' size={100} color='black' />}
-            <Text>Upload</Text>
+            <Text>UPLOAD</Text>
           </View>
         </TouchableOpacity>
       </View>
