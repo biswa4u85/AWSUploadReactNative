@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -43,7 +42,6 @@
 		332DECA8D0494A3DA1F3DD33 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C43E3A5B88334D1F98471667 /* Ionicons.ttf */; };
 		4159767BAF594DA7BA5EC0D5 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9634AD016AB44B90BC3A7692 /* SimpleLineIcons.ttf */; };
 		43676DBF239FB01D00A72213 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43676DBE239FB00700A72213 /* libRNImagePicker.a */; };
-		43676DC6239FB19300A72213 /* libRNAudioRecorderPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43676DC5239FB18C00A72213 /* libRNAudioRecorderPlayer.a */; };
 		4F3C3DF8AB214EC9996426AB /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AF0A97F4DA341D788DA1713 /* FontAwesome5_Brands.ttf */; };
 		56ECCD63B86F4D45BAD0F425 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4458DD524343B4A79FFCFA /* FontAwesome5_Solid.ttf */; };
 		5BCAE986585E4A0D8A74552C /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EDADFC260D4567A7546041 /* libRNGestureHandler.a */; };
@@ -372,13 +370,6 @@
 			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
 			remoteInfo = RNImagePicker;
 		};
-		43676DC4239FB18C00A72213 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43676DC0239FB18C00A72213 /* RNAudioRecorderPlayer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNAudioRecorderPlayer;
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -453,7 +444,6 @@
 		3A3EB3636553477E86CF23ED /* RNAWSCognito.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAWSCognito.xcodeproj; path = "../node_modules/amazon-cognito-identity-js/ios/RNAWSCognito.xcodeproj"; sourceTree = "<group>"; };
 		3D877D2B6EBE400C882CCEBF /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		43676DB9239FB00700A72213 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
-		43676DC0239FB18C00A72213 /* RNAudioRecorderPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAudioRecorderPlayer.xcodeproj; path = "../node_modules/react-native-audio-recorder-player/ios/RNAudioRecorderPlayer.xcodeproj"; sourceTree = "<group>"; };
 		4CC688487314CE6E3002C0A4 /* Pods-awsuploadreactnative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsuploadreactnative.debug.xcconfig"; path = "Target Support Files/Pods-awsuploadreactnative/Pods-awsuploadreactnative.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		623B9101F7E740EC90503823 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -501,7 +491,6 @@
 				43676DBF239FB01D00A72213 /* libRNImagePicker.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
-				43676DC6239FB19300A72213 /* libRNAudioRecorderPlayer.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -746,14 +735,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43676DC1239FB18C00A72213 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				43676DC5239FB18C00A72213 /* libRNAudioRecorderPlayer.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,7 +779,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				43676DC0239FB18C00A72213 /* RNAudioRecorderPlayer.xcodeproj */,
 				43676DB9239FB00700A72213 /* RNImagePicker.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -1043,10 +1023,6 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-				},
-				{
-					ProductGroup = 43676DC1239FB18C00A72213 /* Products */;
-					ProjectRef = 43676DC0239FB18C00A72213 /* RNAudioRecorderPlayer.xcodeproj */;
 				},
 				{
 					ProductGroup = 43676D91239FAFC900A72213 /* Products */;
@@ -1365,13 +1341,6 @@
 			fileType = archive.ar;
 			path = libRNImagePicker.a;
 			remoteRef = 43676DBD239FB00700A72213 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		43676DC5239FB18C00A72213 /* libRNAudioRecorderPlayer.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNAudioRecorderPlayer.a;
-			remoteRef = 43676DC4239FB18C00A72213 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {

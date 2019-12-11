@@ -1,4 +1,4 @@
-#Fri Nov 29 16:02:48 IST 2019
+#Wed Dec 11 17:45:35 IST 2019
 base.0=/home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/transforms/r8/release/0/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

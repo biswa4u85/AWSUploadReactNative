@@ -1,12 +1,12 @@
-# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:20
+# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:21
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:29
+# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:30
 -keep class com.awsuploadreactnative.MainActivity { <init>(); }
-# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:20
+# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:21
 -keep class com.awsuploadreactnative.MainApplication { <init>(); }
-# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:40
+# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:41
 -keep class com.facebook.react.devsupport.DevSettingsActivity { <init>(); }
-# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:42
+# Referenced at /home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/merged_manifests/release/arm64-v8a/AndroidManifest.xml:43
 -keep class com.imagepicker.FileProvider { <init>(); }
 # Referenced at /home/biswajit/.gradle/caches/transforms-2/files-2.1/61fd76c3f848cf55f45e843ab08cdd70/appcompat-1.0.0/res/layout/abc_alert_dialog_title_material.xml:56
 # Referenced at /home/biswajit/.gradle/caches/transforms-2/files-2.1/61fd76c3f848cf55f45e843ab08cdd70/appcompat-1.0.0/res/layout/abc_alert_dialog_material.xml:52

@@ -1,7 +1,0 @@
-#Tue Dec 10 19:31:05 IST 2019
-base.0=/home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/home/biswajit/Sites/BISWA/AWSUploadReactNative/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex

@@ -7,11 +7,8 @@ import { Input } from 'react-native-elements';
 import DocumentPicker from 'react-native-document-picker';
 import ImagePicker from 'react-native-image-picker';
 import { addData } from '../server/server';
-import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 
 export default class AddPage extends Component {
-
-  audioRecorderPlayer = new AudioRecorderPlayer();
 
   constructor(props) {
     super(props);
@@ -75,20 +72,6 @@ export default class AddPage extends Component {
     } else {
       this.audioUpload()
     }
-  };
-
-  _recordAudio = async () => {
-    const result = await this.audioRecorderPlayer.startRecorder();
-    this.audioRecorderPlayer.addRecordBackListener((e) => {
-      this.setState({
-        recordSecs: e.current_position,
-        recordTime: this.audioRecorderPlayer.mmssss(
-          Math.floor(e.current_position),
-        ),
-      });
-      return;
-    });
-    console.log(result);
   };
 
   imageUpload() {
@@ -168,16 +151,15 @@ export default class AddPage extends Component {
   uploadFile(response) {
     const { type, tags } = this.state
     const options = {
-      // ${type}/
       keyPrefix: `${tags}/`,
       bucket: `listfiles-files-new`,
       region: "us-east-1",
-      accessKey: "AKIAZEGHFY3HS7XVCTOL",
-      secretKey: "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",
+      accessKey: "AKIAZEGHFY3H7XM5FU3S",
+      secretKey: "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",
       successActionStatus: 201
     }
-    // console.log(response)
-    // console.log(options)
+    console.log(response)
+    console.log(options)
     this.setState({ isLoadingImg: true });
     RNS3.put(response, options).then(files => {
       if (files.status !== 201) {
@@ -199,10 +181,6 @@ export default class AddPage extends Component {
       </View>
     } else {
       return <View style={{ flexDirection: 'column', alignItems: 'center', marginTop: 20 }}>
-        {type == 'audio' ?
-          <TouchableOpacity onPress={this._recordAudio}>
-            <Text>RECORD AUDIO</Text>
-          </TouchableOpacity> : null}
         <TouchableOpacity onPress={this._takePhoto}>
           <View>
             {fileError ? <Text style={{ color: '#ff0000', fontSize: 12 }}>{fileError}</Text> : null}
